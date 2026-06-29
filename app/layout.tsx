@@ -28,9 +28,17 @@ import {
   Camera,
   Newspaper,
   Landmark,
+  Menu,
 } from "lucide-react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 
 const roboto = Roboto({
@@ -66,16 +74,19 @@ export default function RootLayout({
         <ThemeProvider>
 
           {/* HEADER */}
-          <header className="border-b sticky top-0 bg-background/20 backdrop-blur-2xl z-90">
-            <div className="container mx-auto flex items-center justify-between h-16 px-4">
+          <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-xl">
+            <div className="container mx-auto flex h-16 items-center justify-between px-4">
 
               {/* Logo */}
-              <Link href="/" className={`${logoFont.className} text-xl tracking-wide`}>
+              <Link
+                href="/"
+                className={`${logoFont.className} text-xl tracking-wide`}
+              >
                 Kartar Manik
               </Link>
 
-              {/* Navigation */}
-              <NavigationMenu>
+              {/* ================= Desktop Navigation ================= */}
+              <NavigationMenu className="hidden md:flex">
                 <NavigationMenuList className="gap-6">
 
                   <NavigationMenuItem>
@@ -92,54 +103,11 @@ export default function RootLayout({
                     </Link>
                   </NavigationMenuItem>
 
-                  {/* Dropdown Divisi */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="flex items-center gap-2 bg-transparent">
-                      <Users size={18} />
-                      Divisi
-                    </NavigationMenuTrigger>
-
-                    <NavigationMenuContent>
-                      <ul className="grid w-[300px] gap-3 p-4">
-
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/divisi/pengurus-inti"
-                              className="flex items-center gap-2"
-                            >
-                              <Shield size={16} />
-                              Pengurus Inti
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/divisi/humasy"
-                              className="flex items-center gap-2"
-                            >
-                              <Megaphone size={16} />
-                              Humasy
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-
-                        <li>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href="/divisi/media"
-                              className="flex items-center gap-2"
-                            >
-                              <Camera size={16} />
-                              Media
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-
-                      </ul>
-                    </NavigationMenuContent>
+                    <Link href="/pengurus" className="flex items-center gap-2">
+                      <Shield size={18} />
+                      Pengurus
+                    </Link>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
@@ -149,16 +117,107 @@ export default function RootLayout({
                     </Link>
                   </NavigationMenuItem>
 
-
                 </NavigationMenuList>
               </NavigationMenu>
 
-              {/* CTA */}
-              <div className="flex gap-2">
+              {/* Desktop Right */}
+              <div className="hidden items-center gap-2 md:flex">
                 <ThemeToggle />
+
                 <Link href="/contact">
-                  <Button className="dark:text-white"><Phone /> Contact</Button>
+                  <Button>
+                    <Phone className="mr-2 h-4 w-4" />
+                    Contact
+                  </Button>
                 </Link>
+              </div>
+
+              {/* ================= Mobile Menu ================= */}
+              <div className="flex items-center gap-2 md:hidden">
+
+                <ThemeToggle />
+
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                      <Menu className="h-6 w-6" />
+                    </Button>
+                  </SheetTrigger>
+
+                  <SheetContent side="right" className="w-[280px]">
+
+                    <SheetHeader>
+                      <SheetTitle>Menu Navigasi</SheetTitle>
+                    </SheetHeader>
+
+                    <div className="mt-8 flex flex-col gap-2">
+
+                      <Link
+                        href="/"
+                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                      >
+                        <Home size={18} />
+                        Home
+                      </Link>
+
+                      <Link
+                        href="/profile"
+                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                      >
+                        <Landmark size={18} />
+                        Profil
+                      </Link>
+
+                      <div className="mt-2 px-3 text-sm font-semibold text-muted-foreground">
+                        Divisi
+                      </div>
+
+                      <Link
+                        href="/divisi/pengurus-inti"
+                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                      >
+                        <Shield size={18} />
+                        Pengurus Inti
+                      </Link>
+
+                      <Link
+                        href="/divisi/humasy"
+                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                      >
+                        <Megaphone size={18} />
+                        Humasy
+                      </Link>
+
+                      <Link
+                        href="/divisi/media"
+                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                      >
+                        <Camera size={18} />
+                        Media
+                      </Link>
+
+                      <Link
+                        href="/blog"
+                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                      >
+                        <Newspaper size={18} />
+                        Blog
+                      </Link>
+
+                      <div className="mt-6">
+                        <Link href="/contact">
+                          <Button className="w-full">
+                            <Phone className="mr-2 h-4 w-4" />
+                            Contact
+                          </Button>
+                        </Link>
+                      </div>
+
+                    </div>
+
+                  </SheetContent>
+                </Sheet>
+
               </div>
 
             </div>
