@@ -9,44 +9,89 @@ import {
     Search,
 } from "lucide-react";
 import Img1 from "@/app/images/humasy/humasy.png";
+import { useState } from "react";
 
 
 const members = [
     {
-        id: 1,
-        name: "Ahmad Fauzi",
-        role: "Ketua",
+        id: 7,
+        name: "Muhammad Ruchul Khaqqil Maskun",
+        role: "Anggota",
+        division: "Divisi Humas",
+        image: Img1,
+        bio: "...",
+    },
+    {
+        id: 8,
+        name: "Muhammad Ifan Dwi Wicaksono",
+        role: "Anggota",
+        division: "Divisi Humas",
         image: Img1,
         bio: "Memimpin organisasi dan mengarahkan seluruh program kerja.",
     },
     {
-        id: 2,
-        name: "Rizki Pratama",
-        role: "Wakil Ketua",
+        id: 9,
+        name: "Husni Cahyadi",
+        role: "Anggota",
+        division: "Divisi Humas",
         image: Img1,
         bio: "Membantu koordinasi antar divisi.",
     },
     {
-        id: 3,
-        name: "Siti Aulia",
-        role: "Sekretaris",
+        id: 10,
+        name: "Ujang Keju",
+        role: "Anggota",
+        division: "Divisi Humas",
         image: Img1,
         bio: "Mengelola administrasi organisasi.",
     },
+   
     {
-        id: 4,
-        name: "Nur Hidayat",
-        role: "Bendahara",
+        id: 12,
+        name: "Fajar Kurniawan",
+        role: "Anggota",
+        division: "Divisi Media",
         image: Img1,
         bio: "Mengelola keuangan organisasi.",
+    },
+    {
+        id: 13,
+        name: "Early Abiyan A.S.",
+        role: "Anggota",
+        division: "Divisi Media",
+        image: Img1,
+        bio: "...",
+    },
+    {
+        id: 14,
+        name: "Flora & Fauna",
+        role: "Anggota",
+        division: "Divisi Media",
+        image: Img1,
+        bio: "...",
     },
 ];
 
 export default function Team() {
+    const [selectedDivision, setSelectedDivision] = useState("Semua");
+
+    const filteredMembers =
+        selectedDivision === "Semua"
+            ? members
+            : members.filter(
+                (member) => member.division === selectedDivision
+            );
+
+    const divisions = [
+        "Semua",
+        "Divisi Humas",
+        "Divisi Media",
+    ];
+
     return (
         <section className="relative overflow-hidden py-28">
 
-            <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-indigo-600/10 blur-[120px]" />
+            <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
 
             <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-violet-600/10 blur-[120px]" />
 
@@ -56,12 +101,12 @@ export default function Team() {
 
                 <div className="text-center">
 
-                    <p className="uppercase tracking-[0.35em] text-indigo-400">
+                    <p className="uppercase tracking-[0.35em] text-primary">
                         Meet Our Team
                     </p>
 
                     <h2 className="mt-4 text-5xl font-bold text-white">
-                        Pengurus Divisi Inti
+                        Pengurus Karang Taruna
                     </h2>
 
                     <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400">
@@ -72,54 +117,27 @@ export default function Team() {
 
                 </div>
 
-                {/* Search */}
-
-                <div className="mx-auto mt-14 max-w-xl">
-
-                    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-xl">
-
-                        <Search
-                            size={20}
-                            className="text-slate-400"
-                        />
-
-                        <input
-                            className="w-full bg-transparent text-white outline-none placeholder:text-slate-500"
-                            placeholder="Cari anggota..."
-                        />
-
-                    </div>
-
-                </div>
-
                 {/* Filter */}
-
                 <div className="mt-8 flex flex-wrap justify-center gap-3">
-
-                    {[
-                        "Semua",
-                        "Ketua",
-                        "Wakil",
-                        "Sekretaris",
-                        "Bendahara",
-                    ].map((item) => (
-
+                    {divisions.map((item) => (
                         <button
                             key={item}
-                            className="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-white transition hover:border-indigo-500 hover:bg-indigo-600"
+                            onClick={() => setSelectedDivision(item)}
+                            className={`rounded-full px-6 py-3 transition ${selectedDivision === item
+                                ? "bg-primary text-white"
+                                : "border border-white/10 bg-white/5 text-white hover:bg-primary"
+                                }`}
                         >
                             {item}
                         </button>
-
                     ))}
-
                 </div>
 
                 {/* Team Grid */}
 
-                <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+                <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-                    {members.map((member, index) => (
+                    {filteredMembers.map((member, index) => (
 
                         <motion.div
                             key={member.id}
@@ -162,7 +180,7 @@ export default function Team() {
 
                             <div className="p-7">
 
-                                <span className="rounded-full bg-indigo-600/20 px-4 py-2 text-sm text-indigo-300">
+                                <span className="rounded-full border-amber-300/50 bg-amber-300/10 text-amber-300 px-4 py-2 text-sm">
                                     {member.role}
                                 </span>
 
@@ -177,23 +195,11 @@ export default function Team() {
                                 {/* Social */}
 
                                 <div className="mt-8 flex justify-between">
+                                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-primary w-full flex items-center justify-center gap-2">
 
-                                    <div className="flex gap-3">
-
-                                        <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-indigo-600">
-                                            <Instagram size={18} />
-                                        </button>
-
-                                        <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-indigo-600">
-                                            <Mail size={18} />
-                                        </button>
-
-                                        <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-indigo-600">
-                                            <Phone size={18} />
-                                        </button>
-
-                                    </div>
-
+                                        <Instagram size={18} />
+                                        Instagram
+                                    </button>
                                 </div>
 
                             </div>

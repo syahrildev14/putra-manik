@@ -39,13 +39,6 @@ const programs = [
             "Menjalin kerja sama dengan pemerintah desa, komunitas, UMKM, dan organisasi kepemudaan lainnya.",
         color: "from-orange-500 to-amber-500",
     },
-    {
-        icon: Users,
-        title: "Pembinaan Anggota",
-        description:
-            "Membangun budaya organisasi yang aktif, solid, dan bertanggung jawab melalui pembinaan berkelanjutan.",
-        color: "from-pink-500 to-rose-500",
-    },
 ];
 
 
@@ -55,7 +48,7 @@ export default function Programs() {
 
             {/* Background */}
 
-            <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-indigo-600/10 blur-[120px]" />
+            <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
 
             <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-violet-600/10 blur-[120px]" />
 
@@ -65,7 +58,7 @@ export default function Programs() {
 
                 <div className="mx-auto max-w-3xl text-center">
 
-                    <p className="uppercase tracking-[0.35em] text-indigo-400">
+                    <p className="uppercase tracking-[0.35em] text-primary">
                         Program Kerja
                     </p>
 
@@ -138,14 +131,6 @@ export default function Programs() {
                                         {program.description}
                                     </p>
 
-                                    <button className="mt-8 flex items-center gap-2 text-indigo-400 transition hover:gap-4">
-
-                                        Pelajari Selengkapnya
-
-                                        <ArrowRight size={18} />
-
-                                    </button>
-
                                 </div>
 
                             </motion.div>
@@ -170,14 +155,14 @@ export default function Programs() {
                     viewport={{
                         once: true,
                     }}
-                    className="mt-24 rounded-[32px] border border-white/10 bg-gradient-to-r from-indigo-600/20 via-violet-600/20 to-sky-600/20 p-10 backdrop-blur-xl"
+                    className="mt-24 rounded-[32px] border border-white/10 bg-gradient-to-r from-white/30 via-primary to-primary/20 p-10 backdrop-blur-xl"
                 >
 
                     <div className="grid items-center gap-10 lg:grid-cols-2">
 
                         <div>
 
-                            <p className="uppercase tracking-[0.3em] text-indigo-300">
+                            <p className="uppercase tracking-[0.3em] text-white">
                                 Tujuan Besar
                             </p>
 

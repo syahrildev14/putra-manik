@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Marquee({ children }: { children: React.ReactNode }) {
     return (
-        <div className="relative w-full overflow-hidden bg-primary text-white py-5">
+        <div className="relative w-full overflow-hidden bg-amber-600 text-white py-5">
 
             {/* Fade kiri */}
             <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent z-10" />

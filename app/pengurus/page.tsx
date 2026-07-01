@@ -40,25 +40,12 @@ export default function DivisiIntiPage() {
         <main className="relative overflow-x-hidden text-white">
 
             {/* Scroll Progress */}
-
             <motion.div
                 className="fixed left-0 top-0 z-[999] h-1 origin-left bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-500"
                 style={{
                     width: `${progress}%`,
                 }}
             />
-
-            {/* Background */}
-
-            <div className="pointer-events-none fixed inset-0 -z-10">
-
-                <div className="absolute left-0 top-0 h-[700px] w-[700px] rounded-full bg-indigo-600/10 blur-[180px]" />
-
-                <div className="absolute right-0 top-1/3 h-[600px] w-[600px] rounded-full bg-violet-600/10 blur-[180px]" />
-
-                <div className="absolute bottom-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-600/10 blur-[180px]" />
-
-            </div>
 
             {/* Hero */}
 
@@ -112,7 +99,7 @@ export default function DivisiIntiPage() {
                                 behavior: "smooth",
                             })
                         }
-                        className="fixed bottom-8 right-8 z-50 rounded-2xl bg-indigo-600 p-4 shadow-2xl transition hover:bg-indigo-500"
+                        className="fixed bottom-8 right-8 z-50 rounded-2xl bg-primary p-4 shadow-2xl transition hover:bg-indigo-500"
                     >
 
                         <ChevronUp

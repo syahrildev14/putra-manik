@@ -10,25 +10,25 @@ import Img1 from "@/app/images/humasy/humasy.png";
 
 const leaders = {
     chief: {
-        name: "Ahmad Fauzi",
+        name: "Muhammad Ma’arif",
         role: "Ketua",
         image: Img1,
     },
 
     vice: {
-        name: "Rizki Pratama",
+        name: "Novallino Setyanto Nugroho",
         role: "Wakil Ketua",
         image: Img1,
     },
 
     secretary: {
-        name: "Siti Aulia",
+        name: "Hafitzh Aththorriq",
         role: "Sekretaris",
         image: Img1,
     },
 
     treasurer: {
-        name: "Nur Hidayat",
+        name: "Nabila Azzahra",
         role: "Bendahara",
         image: Img1,
     },
@@ -36,18 +36,13 @@ const leaders = {
 
 const coordinators = [
     {
-        name: "Rama",
+        name: "Muhammad Novan Ferdiyan",
         division: "Media",
         image: Img1,
     },
     {
-        name: "Fajar",
+        name: "Syahril Caesa Mahira",
         division: "Humas",
-        image: Img1,
-    },
-    {
-        name: "Dimas",
-        division: "Sosial",
         image: Img1,
     },
 ];
@@ -84,21 +79,21 @@ function LeaderCard({
                     {name}
                 </h3>
 
-                <p className="mt-2 text-indigo-400">
+                <p className="mt-2 text-primary">
                     {role}
                 </p>
 
                 <div className="mt-6 flex justify-center gap-3">
 
-                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-indigo-600">
+                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-primary">
                         <Instagram size={18} />
                     </button>
 
-                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-indigo-600">
+                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-primary">
                         <Facebook size={18} />
                     </button>
 
-                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-indigo-600">
+                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-primary">
                         <Mail size={18} />
                     </button>
 
@@ -117,7 +112,7 @@ export default function OrganizationChart() {
 
                 <div className="mb-20 text-center">
 
-                    <span className="text-sm uppercase tracking-[0.3em] text-indigo-400">
+                    <span className="text-sm uppercase tracking-[0.3em] text-primary">
                         Struktur Organisasi
                     </span>
 
@@ -162,7 +157,7 @@ export default function OrganizationChart() {
                         Koordinator Divisi
                     </h3>
 
-                    <div className="grid gap-8 md:grid-cols-3">
+                    <div className="grid gap-8 md:grid-cols-2">
 
                         {coordinators.map((item) => (
 
@@ -184,7 +179,7 @@ export default function OrganizationChart() {
                                     {item.name}
                                 </h4>
 
-                                <p className="text-center text-indigo-400">
+                                <p className="text-center text-primary">
                                     {item.division}
                                 </p>
 

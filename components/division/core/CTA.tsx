@@ -21,7 +21,7 @@ export default function CTA() {
                         repeat: Infinity,
                         ease: "easeInOut",
                     }}
-                    className="absolute left-10 top-0 h-[500px] w-[500px] rounded-full bg-indigo-600/20 blur-[140px]"
+                    className="absolute left-10 top-0 h-[500px] w-[500px] rounded-full bg-primary/20 blur-[140px]"
                 />
 
                 <motion.div
@@ -64,14 +64,14 @@ export default function CTA() {
 
                         <div>
 
-                            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-5 py-2">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/50 bg-amber-300/10 text-amber-300 px-5 py-2">
 
                                 <Sparkles
                                     size={16}
-                                    className="text-indigo-300"
+                                    className="text-amber-300"
                                 />
 
-                                <span className="text-sm text-indigo-300">
+                                <span className="text-sm text-amber-300">
                                     Mari Berkarya Bersama
                                 </span>
 
@@ -80,7 +80,7 @@ export default function CTA() {
                             <h2 className="mt-8 text-4xl font-black leading-tight text-white md:text-6xl">
 
                                 Siap Menjadi
-                                <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-primary to-amber-300 bg-clip-text text-transparent">
                                     {" "}Bagian{" "}
                                 </span>
 
@@ -100,7 +100,7 @@ export default function CTA() {
 
                             <div className="mt-12 flex flex-wrap gap-5">
 
-                                <button className="group flex items-center gap-3 rounded-2xl bg-indigo-600 px-8 py-5 text-white transition hover:bg-indigo-500">
+                                <button className="group flex items-center gap-3 rounded-2xl bg-primary px-8 py-5 text-white transition hover:bg-primary/80">
 
                                     Gabung Sekarang
 
@@ -111,7 +111,7 @@ export default function CTA() {
 
                                 </button>
 
-                                <button className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-5 text-white transition hover:border-indigo-500 hover:bg-white/10">
+                                <button className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-5 text-white transition hover:border-primary hover:bg-white/10">
 
                                     <Phone size={18} />
 
@@ -131,12 +131,12 @@ export default function CTA() {
                                 whileHover={{
                                     scale: 1.03,
                                 }}
-                                className="rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-600/20 to-violet-600/20 p-8 backdrop-blur-xl"
+                                className="rounded-3xl border border-white/10 bg-gradient-to-br from-primary/20 to-amber-300/30 p-8 backdrop-blur-xl"
                             >
 
                                 <Users
                                     size={42}
-                                    className="text-indigo-300"
+                                    className="text-amber-300"
                                 />
 
                                 <h3 className="mt-6 text-5xl font-black text-white">

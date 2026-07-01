@@ -41,7 +41,7 @@ export default function About() {
         <section className="relative overflow-hidden py-28">
 
             {/* Background */}
-            <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-indigo-600/10 blur-[120px]" />
+            <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-primary/10 blur-[120px]" />
             <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-violet-600/10 blur-[120px]" />
 
             <div className="relative mx-auto max-w-7xl px-6">
@@ -57,13 +57,13 @@ export default function About() {
                         transition={{ duration: .7 }}
                     >
 
-                        <p className="uppercase tracking-[0.3em] text-indigo-400">
+                        <p className="uppercase tracking-[0.3em] text-primary">
                             Tentang Divisi
                         </p>
 
                         <h2 className="mt-5 text-5xl font-bold leading-tight text-white">
                             Penggerak Utama
-                            <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-primary to-amber-300 bg-clip-text text-transparent">
                                 {" "}Karang Taruna
                             </span>
                         </h2>
@@ -200,7 +200,7 @@ export default function About() {
                                 className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition"
                             >
 
-                                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-amber-300">
 
                                     <Icon
                                         size={30}

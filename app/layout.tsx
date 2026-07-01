@@ -21,17 +21,13 @@ import { Righteous, Roboto } from "next/font/google";
 // icons
 import {
   Home,
-  Users,
   Phone,
   Shield,
-  Megaphone,
-  Camera,
   Newspaper,
   Landmark,
   Menu,
 } from "lucide-react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import {
   Sheet,
   SheetContent,
@@ -74,7 +70,7 @@ export default function RootLayout({
         <ThemeProvider>
 
           {/* HEADER */}
-          <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-xl">
+          <header className="sticky top-0 z-90 border-b bg-background/80 backdrop-blur-xl">
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
 
               {/* Logo */}
@@ -82,11 +78,11 @@ export default function RootLayout({
                 href="/"
                 className={`${logoFont.className} text-xl tracking-wide`}
               >
-                Kartar Manik
+                Putra Manik
               </Link>
 
               {/* ================= Desktop Navigation ================= */}
-              <NavigationMenu className="hidden md:flex">
+              <NavigationMenu className="hidden md:flex z-90">
                 <NavigationMenuList className="gap-6">
 
                   <NavigationMenuItem>
@@ -121,11 +117,11 @@ export default function RootLayout({
               </NavigationMenu>
 
               {/* Desktop Right */}
-              <div className="hidden items-center gap-2 md:flex">
-                <ThemeToggle />
+              <div className="hidden items-center gap-2 md:flex z-50">
+                
 
                 <Link href="/contact">
-                  <Button>
+                  <Button className="text-white bg-amber-600">
                     <Phone className="mr-2 h-4 w-4" />
                     Contact
                   </Button>
@@ -134,8 +130,6 @@ export default function RootLayout({
 
               {/* ================= Mobile Menu ================= */}
               <div className="flex items-center gap-2 md:hidden">
-
-                <ThemeToggle />
 
                 <Sheet>
                   <SheetTrigger asChild>
@@ -168,32 +162,12 @@ export default function RootLayout({
                         Profil
                       </Link>
 
-                      <div className="mt-2 px-3 text-sm font-semibold text-muted-foreground">
-                        Divisi
-                      </div>
-
                       <Link
-                        href="/divisi/pengurus-inti"
+                        href="/divisi/pengurus"
                         className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
                       >
                         <Shield size={18} />
-                        Pengurus Inti
-                      </Link>
-
-                      <Link
-                        href="/divisi/humasy"
-                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
-                      >
-                        <Megaphone size={18} />
-                        Humasy
-                      </Link>
-
-                      <Link
-                        href="/divisi/media"
-                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
-                      >
-                        <Camera size={18} />
-                        Media
+                        Pengurus
                       </Link>
 
                       <Link
@@ -204,9 +178,9 @@ export default function RootLayout({
                         Blog
                       </Link>
 
-                      <div className="mt-6">
+                      <div className="mt-6 px-3">
                         <Link href="/contact">
-                          <Button className="w-full">
+                          <Button className="w-full text-white">
                             <Phone className="mr-2 h-4 w-4" />
                             Contact
                           </Button>

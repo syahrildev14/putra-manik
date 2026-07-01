@@ -61,7 +61,7 @@ export default function Timeline() {
 
                 <div className="mx-auto max-w-3xl text-center">
 
-                    <p className="uppercase tracking-[0.35em] text-indigo-400">
+                    <p className="uppercase tracking-[0.35em] text-primary">
                         Timeline
                     </p>
 
@@ -95,7 +95,7 @@ export default function Timeline() {
                             whileInView={{ width: "100%" }}
                             viewport={{ once: true }}
                             transition={{ duration: 2 }}
-                            className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-500"
+                            className="h-full rounded-full bg-gradient-to-r from-primary via-amber-500 to-amber-100"
                         />
 
                     </div>
@@ -132,7 +132,7 @@ export default function Timeline() {
 
                                     {/* Dot */}
 
-                                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-slate-950 bg-gradient-to-br from-indigo-600 to-violet-600 shadow-2xl">
+                                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-slate-950 bg-gradient-to-br from-primary to-amber-300 shadow-2xl">
 
                                         <Icon
                                             className="text-white"
@@ -145,7 +145,7 @@ export default function Timeline() {
 
                                     <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
 
-                                        <span className="rounded-full bg-indigo-500/20 px-4 py-2 text-sm text-indigo-300">
+                                        <span className="rounded-full px-4 py-2 text-sm border-amber-300/50 bg-amber-300/10 text-amber-300">
 
                                             {item.month}
 

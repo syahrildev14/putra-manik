@@ -53,7 +53,7 @@ export default function Stats() {
             className="relative overflow-hidden py-24"
         >
             {/* Glow Background */}
-            <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-indigo-600/10 blur-3xl" />
+            <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-violet-600/10 blur-3xl" />
 
             <div className="relative mx-auto max-w-7xl px-6">
@@ -65,7 +65,7 @@ export default function Stats() {
                     transition={{ duration: .6 }}
                     className="mx-auto mb-16 max-w-3xl text-center"
                 >
-                    <p className="font-medium uppercase tracking-[0.3em] text-indigo-400">
+                    <p className="font-medium uppercase tracking-[0.3em] text-primary">
                         Statistik
                     </p>
 
@@ -232,7 +232,7 @@ export default function Stats() {
 
                         </div>
 
-                        <div className="rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 p-6">
+                        <div className="rounded-2xl bg-gradient-to-br from-primary to-violet-600 p-6">
 
                             <p className="text-sm uppercase tracking-widest text-white/70">
                                 Target Tahun Ini
