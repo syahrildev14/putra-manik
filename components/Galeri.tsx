@@ -61,13 +61,13 @@ export default function SectionGaleri() {
     <section className="relative max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-28 text-white overflow-hidden">
       {/* TITLE */}
       <div className="text-center mb-14 space-y-4">
-        <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
+        <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
           Dokumentasi Kegiatan
         </span>
         <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight">
           Galeri Putra Manik
         </h2>
-        <p className="max-w-xl mx-auto text-sm md:text-base leading-relaxed text-primary/60 dark:text-white/50">
+        <p className="max-w-xl mx-auto text-sm md:text-base leading-relaxed text-primary/60 text-white/50">
           Dokumentasi kegiatan Karang Taruna dalam berbagai kegiatan sosial,
           kepemudaan, dan kemasyarakatan.
         </p>
@@ -80,7 +80,7 @@ export default function SectionGaleri() {
             key={i}
             onClick={() => setSelected(i)}
             aria-label={`Buka foto ${i + 1}`}
-            className={`group relative overflow-hidden rounded-sm border border-primary/10 dark:border-white/10 hover:border-amber-500/40 transition-colors duration-300 ${spans[i % spans.length]}`}
+            className={`group relative overflow-hidden rounded-sm border border-primary/10 border-white/10 hover:border-amber-500/40 transition-colors duration-300 ${spans[i % spans.length]}`}
           >
             <Image
               src={img}

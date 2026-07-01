@@ -48,7 +48,7 @@ export default function SectionBlog() {
 
         {/* TITLE */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-primary dark:text-white">
+          <h2 className="text-3xl font-bold text-primary text-white">
             Blog & Kegiatan
           </h2>
           <p className="text-gray-500 mt-2">
@@ -81,13 +81,13 @@ export default function SectionBlog() {
 
                   <CardHeader>
                     <CardTitle>{blog.title}</CardTitle>
-                    <CardDescription className="text-primary/50 dark:text-white/50">
+                    <CardDescription className="text-primary/50 text-white/50">
                       {blog.desc}
                     </CardDescription>
                   </CardHeader>
 
                   <CardContent>
-                    <button className="text-primary dark:text-white font-semibold">
+                    <button className="text-primary text-white font-semibold">
                       Baca Selengkapnya →
                     </button>
                   </CardContent>

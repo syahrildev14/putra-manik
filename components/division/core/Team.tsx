@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -8,13 +9,23 @@ import {
     Phone,
     Search,
 } from "lucide-react";
-import Img1 from "@/app/images/humasy/humasy.png";
-import { useState } from "react";
+
+// Image Team
+import Img1 from "@/app/images/team/akil.png";
+import Img2 from "@/app/images/team/ipan.png";
+import Img3 from "@/app/images/team/husni.png";
+import Img4 from "@/app/images/team/uj.png";
+import Img5 from "@/app/images/team/fajar.png";
+import Img6 from "@/app/images/team/abi.png";
+import Img7 from "@/app/images/team/flora.png";
+import Img8 from "@/app/images/team/ciput.png";
+import Img9 from "@/app/images/team/fadil.png";
+
 
 
 const members = [
     {
-        id: 7,
+        id: 1,
         name: "Muhammad Ruchul Khaqqil Maskun",
         role: "Anggota",
         division: "Divisi Humas",
@@ -22,52 +33,68 @@ const members = [
         bio: "...",
     },
     {
-        id: 8,
+        id: 2,
         name: "Muhammad Ifan Dwi Wicaksono",
         role: "Anggota",
         division: "Divisi Humas",
-        image: Img1,
+        image: Img2,
         bio: "Memimpin organisasi dan mengarahkan seluruh program kerja.",
     },
     {
-        id: 9,
+        id: 3,
         name: "Husni Cahyadi",
         role: "Anggota",
         division: "Divisi Humas",
-        image: Img1,
+        image: Img3,
         bio: "Membantu koordinasi antar divisi.",
     },
     {
-        id: 10,
+        id: 4,
         name: "Ujang Keju",
         role: "Anggota",
         division: "Divisi Humas",
-        image: Img1,
+        image: Img4,
         bio: "Mengelola administrasi organisasi.",
     },
-   
+
     {
-        id: 12,
+        id: 5,
         name: "Fajar Kurniawan",
         role: "Anggota",
         division: "Divisi Media",
-        image: Img1,
+        image: Img5,
         bio: "Mengelola keuangan organisasi.",
     },
     {
-        id: 13,
+        id: 6,
         name: "Early Abiyan A.S.",
         role: "Anggota",
         division: "Divisi Media",
-        image: Img1,
+        image: Img6,
         bio: "...",
     },
     {
-        id: 14,
+        id: 7,
         name: "Flora & Fauna",
         role: "Anggota",
         division: "Divisi Media",
-        image: Img1,
+        image: Img7,
+        bio: "...",
+    },
+    {
+        id: 8,
+        name: "Ciput",
+        role: "Anggota",
+        division: "Divisi Media",
+        image: Img8,
+        bio: "...",
+    },
+    {
+        id: 9,
+        name: "Cuklik",
+        role: "Anggota",
+        division: "Divisi Media",
+        image: Img9,
         bio: "...",
     },
 ];

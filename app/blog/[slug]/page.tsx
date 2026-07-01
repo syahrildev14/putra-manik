@@ -57,7 +57,7 @@ export default async function BlogDetailPage({
 
         {/* Header */}
         <div className="space-y-5 mb-10">
-          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
+          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
             {post.category}
           </span>
 
@@ -65,7 +65,7 @@ export default async function BlogDetailPage({
             {post.title}
           </h1>
 
-          <div className="flex items-center gap-3 font-mono text-xs text-primary/40 dark:text-white/40">
+          <div className="flex items-center gap-3 font-mono text-xs text-primary/40 text-white/40">
             <span>{post.author}</span>
             <span>&middot;</span>
             <span>{post.date}</span>
@@ -91,8 +91,8 @@ export default async function BlogDetailPage({
           {post.content.map((paragraph, i) => (
             <p
               key={i}
-              className={`text-base leading-relaxed text-primary/80 dark:text-white/70 ${i === 0
-                ? "first-letter:font-serif first-letter:text-5xl first-letter:font-medium first-letter:text-amber-600 dark:first-letter:text-amber-400 first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
+              className={`text-base leading-relaxed text-primary/80 text-white/70 ${i === 0
+                ? "first-letter:font-serif first-letter:text-5xl first-letter:font-medium first-letter:text-amber-600 first-letter:text-amber-400 first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
                 : ""
                 }`}
             >
@@ -101,12 +101,12 @@ export default async function BlogDetailPage({
           ))}
         </div>
 
-        <div className="h-px w-full bg-primary/10 dark:bg-white/10 mt-16 mb-12" />
+        <div className="h-px w-full bg-primary/10 bg-white/10 mt-16 mb-12" />
 
         {/* Related posts */}
         {related.length > 0 && (
           <div className="space-y-6">
-            <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-primary/40 dark:text-white/40">
+            <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-primary/40 text-white/40">
               Baca juga
             </span>
 
@@ -115,7 +115,7 @@ export default async function BlogDetailPage({
                 <Link
                   key={r.slug}
                   href={`/blog/${r.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-sm border border-primary/10 dark:border-white/10 hover:border-amber-500/40 transition-colors duration-300"
+                  className="group flex flex-col overflow-hidden rounded-sm border border-primary/10 border-white/10 hover:border-amber-500/40 transition-colors duration-300"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
@@ -127,7 +127,7 @@ export default async function BlogDetailPage({
                     />
                   </div>
                   <div className="p-4 space-y-2">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-600 dark:text-amber-400">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-600 text-amber-400">
                       {r.category}
                     </span>
                     <h4 className="font-serif text-base font-medium leading-snug">

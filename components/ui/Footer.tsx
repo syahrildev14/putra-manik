@@ -16,7 +16,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="relative text-primary dark:text-white overflow-hidden">
+    <footer className="relative text-primary text-white overflow-hidden">
       {/* accent line */}
       <div className="absolute top-0 left-0 w-24 h-px bg-amber-500" />
 
@@ -25,14 +25,14 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
+              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
                 Kartar
               </span>
               <h2 className="font-serif text-2xl font-medium tracking-tight">
                 Putra Manik
               </h2>
             </div>
-            <p className="text-sm leading-relaxed text-primary/60 dark:text-white/50 max-w-xs">
+            <p className="text-sm leading-relaxed text-primary/60 text-white/50 max-w-xs">
               Organisasi kepemudaan yang bergerak dalam kegiatan sosial,
               pelatihan, dan pelestarian lingkungan untuk membangun desa
               bersama generasi muda.
@@ -46,7 +46,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="flex items-center justify-center w-9 h-9 rounded-full border border-primary/15 dark:border-white/15 text-primary/60 dark:text-white/60 hover:border-amber-500/50 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                  className="flex items-center justify-center w-9 h-9 rounded-full border border-primary/15 border-white/15 text-primary/60 text-white/60 hover:border-amber-500/50 hover:text-amber-600 hover:text-amber-400 transition-colors"
                 >
                   <s.icon size={16} />
                 </a>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/40 dark:text-white/40 mb-4">
+            <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/40 text-white/40 mb-4">
               Menu
             </h3>
             <ul className="space-y-3 text-sm">
@@ -64,7 +64,7 @@ const Footer = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-primary/70 dark:text-white/60 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                    className="text-primary/70 text-white/60 hover:text-amber-600 hover:text-amber-400 transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -75,20 +75,20 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/40 dark:text-white/40 mb-4">
+            <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/40 text-white/40 mb-4">
               Kontak
             </h3>
-            <ul className="space-y-3 text-sm text-primary/70 dark:text-white/60">
+            <ul className="space-y-3 text-sm text-primary/70 text-white/60">
               <li className="flex items-start gap-2.5">
-                <MapPin size={15} className="mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
+                <MapPin size={15} className="mt-0.5 shrink-0 text-amber-600 text-amber-400" />
                 <span>Dusun Gambang, RW 02 / RT 06</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail size={15} className="shrink-0 text-amber-600 dark:text-amber-400" />
+                <Mail size={15} className="shrink-0 text-amber-600 text-amber-400" />
                 <span>kartarmanik@gmail.com</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone size={15} className="shrink-0 text-amber-600 dark:text-amber-400" />
+                <Phone size={15} className="shrink-0 text-amber-600 text-amber-400" />
                 <span>+62 812 xxxx xxxx</span>
               </li>
             </ul>
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-primary/10 dark:border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-primary/40 dark:text-white/40">
+        <div className="border-t border-primary/10 border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-primary/40 text-white/40">
           <p>&copy; {new Date().getFullYear()} Karang Taruna Putra Manik. Seluruh hak cipta dilindungi.</p>
           <p className="font-mono tracking-wide">Dibangun dengan dedikasi untuk desa</p>
         </div>

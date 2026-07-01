@@ -34,6 +34,7 @@ import {
   SheetTrigger,
   SheetHeader,
   SheetTitle,
+  SheetClose,
 } from "@/components/ui/sheet";
 
 
@@ -70,7 +71,7 @@ export default function RootLayout({
         <ThemeProvider>
 
           {/* HEADER */}
-          <header className="sticky top-0 z-90 border-b bg-background/80 backdrop-blur-xl">
+          <header className="sticky top-0 z-90 bg-background/80 backdrop-blur-xl">
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
 
               {/* Logo */}
@@ -118,7 +119,7 @@ export default function RootLayout({
 
               {/* Desktop Right */}
               <div className="hidden items-center gap-2 md:flex z-50">
-                
+
 
                 <Link href="/contact">
                   <Button className="text-white bg-amber-600">
@@ -146,45 +147,55 @@ export default function RootLayout({
 
                     <div className="mt-8 flex flex-col gap-2">
 
-                      <Link
-                        href="/"
-                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
-                      >
-                        <Home size={18} />
-                        Home
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          href="/"
+                          className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                        >
+                          <Home size={18} />
+                          Home
+                        </Link>
+                      </SheetClose>
 
-                      <Link
-                        href="/profile"
-                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
-                      >
-                        <Landmark size={18} />
-                        Profil
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          href="/profile"
+                          className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                        >
+                          <Landmark size={18} />
+                          Profil
+                        </Link>
+                      </SheetClose>
 
-                      <Link
-                        href="/divisi/pengurus"
-                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
-                      >
-                        <Shield size={18} />
-                        Pengurus
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          href="/pengurus"
+                          className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                        >
+                          <Shield size={18} />
+                          Pengurus
+                        </Link>
+                      </SheetClose>
 
-                      <Link
-                        href="/blog"
-                        className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
-                      >
-                        <Newspaper size={18} />
-                        Blog
-                      </Link>
+                      <SheetClose asChild>
+                        <Link
+                          href="/blog"
+                          className="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-muted"
+                        >
+                          <Newspaper size={18} />
+                          Blog
+                        </Link>
+                      </SheetClose>
 
                       <div className="mt-6 px-3">
-                        <Link href="/contact">
-                          <Button className="w-full text-white">
-                            <Phone className="mr-2 h-4 w-4" />
-                            Contact
-                          </Button>
-                        </Link>
+                        <SheetClose asChild>
+                          <Link href="/contact">
+                            <Button className="w-full text-white">
+                              <Phone className="mr-2 h-4 w-4" />
+                              Contact
+                            </Button>
+                          </Link>
+                        </SheetClose>
                       </div>
 
                     </div>

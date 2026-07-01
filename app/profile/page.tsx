@@ -3,6 +3,7 @@ import bareng from "@/app/images/bareng.webp"
 import SectionGaleri from "@/components/Galeri"
 
 import { Target, Eye, History } from "lucide-react"
+import About from "@/components/division/core/About"
 
 const Page = () => {
   return (
@@ -37,6 +38,8 @@ const Page = () => {
         </div>
 
       </section>
+      
+      <About />
 
       <section className="max-w-7xl mx-auto px-4 py-20 space-y-20">
 
@@ -106,7 +109,7 @@ const Page = () => {
             <h2 className="text-3xl font-bold mb-3">
               Visi & Misi
             </h2>
-            <p className="text-primary dark:text-white/50 max-w-xl mx-auto">
+            <p className="text-primary text-white/50 max-w-xl mx-auto">
               Komitmen Karang Taruna dalam membangun generasi muda yang aktif,
               kreatif, dan berkontribusi bagi masyarakat.
             </p>
@@ -121,7 +124,7 @@ const Page = () => {
                 <h3 className="text-xl font-semibold">Visi</h3>
               </div>
 
-              <p className="text-primary dark:text-white">
+              <p className="text-primary text-white">
                 Menjadi organisasi kepemudaan yang aktif, inovatif, dan
                 berkontribusi dalam pembangunan masyarakat serta pengembangan
                 potensi generasi muda.
@@ -135,7 +138,7 @@ const Page = () => {
                 <h3 className="text-xl font-semibold">Misi</h3>
               </div>
 
-              <ul className="space-y-2 text-primary dark:text-white list-disc list-inside">
+              <ul className="space-y-2 text-primary text-white list-disc list-inside">
                 <li>Meningkatkan solidaritas dan kepedulian sosial pemuda.</li>
                 <li>Mengembangkan potensi dan kreativitas generasi muda.</li>
                 <li>Menyelenggarakan kegiatan sosial dan kemasyarakatan.</li>

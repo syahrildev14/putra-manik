@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 import Hero from "@/components/division/core/Hero";
 import Stats from "@/components/division/core/Stats";
-import About from "@/components/division/core/About";
 import Programs from "@/components/division/core/Programs";
 import Timeline from "@/components/division/core/Timeline";
 import OrganizationChart from "@/components/division/core/OrganizationChart";
@@ -56,8 +55,6 @@ export default function DivisiIntiPage() {
             <div className="relative z-10">
 
                 <Stats />
-
-                <About />
 
                 <Programs />
 

@@ -22,13 +22,13 @@ export default function BlogPage() {
       <section className="max-w-6xl mx-auto px-4 md:px-6 pt-18 md:pt-10 pb-20 md:pb-28">
         {/* Header */}
         <div className="mb-14 md:mb-20 space-y-4">
-          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
+          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
             Blog & Artikel
           </span>
           <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight max-w-2xl">
             Cerita dari Kartar Manik
           </h1>
-          <p className="max-w-xl text-sm md:text-base leading-relaxed text-primary/60 dark:text-white/50">
+          <p className="max-w-xl text-sm md:text-base leading-relaxed text-primary/60 text-white/50">
             Dokumentasi, cerita, dan perkembangan kegiatan Karang Taruna
             Putra Manik dalam membangun desa dan generasi muda.
           </p>
@@ -37,7 +37,7 @@ export default function BlogPage() {
         {/* Featured post */}
         <Link
           href={`/blog/${featured.slug}`}
-          className="group grid md:grid-cols-2 gap-6 md:gap-10 mb-16 md:mb-20 rounded-sm border border-primary/10 dark:border-white/10 hover:border-amber-500/40 transition-colors duration-300 overflow-hidden"
+          className="group grid md:grid-cols-2 gap-6 md:gap-10 mb-16 md:mb-20 rounded-sm border border-primary/10 border-white/10 hover:border-amber-500/40 transition-colors duration-300 overflow-hidden"
         >
           <div className="relative h-64 md:h-full overflow-hidden">
             <Image
@@ -51,8 +51,8 @@ export default function BlogPage() {
           </div>
 
           <div className="flex flex-col justify-center gap-4 p-6 md:p-10 md:pl-0">
-            <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-primary/40 dark:text-white/40">
-              <span className="text-amber-600 dark:text-amber-400">Artikel utama</span>
+            <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em] text-primary/40 text-white/40">
+              <span className="text-amber-600 text-amber-400">Artikel utama</span>
               <span>&middot;</span>
               <span>{featured.category}</span>
             </div>
@@ -61,11 +61,11 @@ export default function BlogPage() {
               {featured.title}
             </h2>
 
-            <p className="text-sm leading-relaxed text-primary/60 dark:text-white/50">
+            <p className="text-sm leading-relaxed text-primary/60 text-white/50">
               {featured.excerpt}
             </p>
 
-            <div className="flex items-center gap-3 font-mono text-[11px] text-primary/40 dark:text-white/40 pt-2">
+            <div className="flex items-center gap-3 font-mono text-[11px] text-primary/40 text-white/40 pt-2">
               <span>{featured.date}</span>
               <span>&middot;</span>
               <span>{featured.readTime} baca</span>
@@ -81,8 +81,8 @@ export default function BlogPage() {
               onClick={() => setActive(cat)}
               className={`px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-[0.15em] border transition-colors duration-300 ${
                 active === cat
-                  ? "border-amber-500 text-amber-600 dark:text-amber-400 bg-amber-500/5"
-                  : "border-primary/15 dark:border-white/15 text-primary/50 dark:text-white/50 hover:border-primary/30 dark:hover:border-white/30"
+                  ? "border-amber-500 text-amber-600 text-amber-400 bg-amber-500/5"
+                  : "border-primary/15 border-white/15 text-primary/50 text-white/50 hover:border-primary/30 hover:border-white/30"
               }`}
             >
               {cat}
@@ -96,7 +96,7 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col overflow-hidden rounded-sm border border-primary/10 dark:border-white/10 hover:border-amber-500/40 transition-colors duration-300"
+              className="group flex flex-col overflow-hidden rounded-sm border border-primary/10 border-white/10 hover:border-amber-500/40 transition-colors duration-300"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -109,7 +109,7 @@ export default function BlogPage() {
               </div>
 
               <div className="flex flex-col gap-3 p-6">
-                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-amber-600 dark:text-amber-400">
+                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-amber-600 text-amber-400">
                   {post.category}
                 </span>
 
@@ -117,11 +117,11 @@ export default function BlogPage() {
                   {post.title}
                 </h3>
 
-                <p className="text-sm leading-relaxed text-primary/60 dark:text-white/50 line-clamp-2">
+                <p className="text-sm leading-relaxed text-primary/60 text-white/50 line-clamp-2">
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center gap-3 font-mono text-[10px] text-primary/40 dark:text-white/40 pt-1">
+                <div className="flex items-center gap-3 font-mono text-[10px] text-primary/40 text-white/40 pt-1">
                   <span>{post.date}</span>
                   <span>&middot;</span>
                   <span>{post.readTime} baca</span>
@@ -131,7 +131,7 @@ export default function BlogPage() {
           ))}
 
           {rest.length === 0 && (
-            <p className="col-span-full text-center text-sm text-primary/50 dark:text-white/40 py-16">
+            <p className="col-span-full text-center text-sm text-primary/50 text-white/40 py-16">
               Belum ada artikel untuk kategori ini.
             </p>
           )}

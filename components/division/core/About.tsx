@@ -8,6 +8,7 @@ import {
     ShieldCheck,
     Sparkles,
 } from "lucide-react";
+import Logo from "@/app/images/Logo.png";
 
 const features = [
     {
@@ -47,6 +48,46 @@ export default function About() {
             <div className="relative mx-auto max-w-7xl px-6">
 
                 <div className="grid items-center gap-20 lg:grid-cols-2">
+                    {/* RIGHT */}
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7 }}
+                        className="flex flex-col items-center text-center"
+                    >
+                        {/* Logo */}
+
+                        <div className="relative flex h-80 w-80 items-center justify-center rounded-full border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
+                            <div className="absolute inset-0 rounded-full bg-primary/10 blur-3xl" />
+
+                            <Image
+                                src={Logo}
+                                alt="Logo Karang Taruna"
+                                width={220}
+                                height={220}
+                                className="relative object-contain"
+                            />
+                        </div>
+
+                        {/* Penjelasan */}
+
+                        <div className="mt-10 max-w-md">
+                            
+
+                            <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/10 p-5">
+                                <p className="text-sm uppercase tracking-widest text-primary">
+                                    Motto
+                                </p>
+
+                                <h4 className="mt-2 text-xl font-semibold text-white">
+                                    Bersama Berkarya, Bersama Membangun
+                                </h4>
+                            </div>
+                        </div>
+                    </motion.div>
+
 
                     {/* LEFT */}
 
@@ -114,57 +155,7 @@ export default function About() {
 
                     </motion.div>
 
-                    {/* RIGHT */}
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: .7 }}
-                        className="relative"
-                    >
-
-                        {/* Image */}
-
-                        <div className="relative overflow-hidden rounded-[32px] border border-white/10">
-
-                            <Image
-                                src="/images/division/core-team.jpg"
-                                alt="Divisi Inti"
-                                width={700}
-                                height={700}
-                                className="h-[650px] w-full object-cover"
-                            />
-
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-
-                        </div>
-
-                        {/* Floating Card */}
-
-                        <motion.div
-                            animate={{
-                                y: [-10, 10, -10],
-                            }}
-                            transition={{
-                                repeat: Infinity,
-                                duration: 6,
-                            }}
-                            className="absolute -bottom-10 left-10 rounded-3xl border border-white/10 bg-slate-900/80 p-8 backdrop-blur-xl"
-                        >
-
-                            <p className="text-sm uppercase tracking-widest text-indigo-400">
-                                Motto
-                            </p>
-
-                            <h3 className="mt-3 text-2xl font-bold text-white">
-                                Bersama Berkarya,
-                                Bersama Membangun
-                            </h3>
-
-                        </motion.div>
-
-                    </motion.div>
 
                 </div>
 

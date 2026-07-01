@@ -39,13 +39,13 @@ export default function Section() {
       <div className="max-w-6xl mx-auto px-6 w-full">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20 space-y-4">
-          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 dark:text-amber-400">
+          <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
             Struktur Organisasi
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-medium tracking-tight">
             Divisi Kami
           </h2>
-          <p className="mt-4 max-w-xl mx-auto text-sm md:text-base leading-relaxed text-white/60 dark:text-white/50">
+          <p className="mt-4 max-w-xl mx-auto text-sm md:text-base leading-relaxed text-white/60 text-white/50">
             Kami adalah organisasi kepemudaan yang berkomitmen membangun
             generasi muda yang aktif, kreatif, dan peduli terhadap lingkungan
             serta masyarakat sekitar.
@@ -57,7 +57,7 @@ export default function Section() {
           {divisions.map((d, i) => (
             <div key={i} className="flex flex-col items-center gap-4">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs text-amber-600 dark:text-amber-400">
+                <span className="font-mono text-xs text-amber-600 text-amber-400">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="font-serif text-2xl font-medium">{d.label}</h3>
@@ -70,7 +70,7 @@ export default function Section() {
         {/* Desktop: Timeline Layout */}
         <div className="relative space-y-28 hidden md:block">
           {/* Garis tengah */}
-          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-primary/15 dark:via-white/90 to-transparent" />
+          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-primary/15 via-white/90 to-transparent" />
 
           {divisions.map((d, i) => {
             const cardOnLeft = i % 2 === 0
@@ -101,7 +101,7 @@ export default function Section() {
                 )}
 
                 {/* Dot */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-amber-500 ring-[6px] ring-white dark:ring-neutral-950" />
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-amber-500 ring-[6px] ring-white ring-neutral-950" />
               </div>
             )
           })}
@@ -113,7 +113,7 @@ export default function Section() {
 
 function DivisionCard({ division, index }: { division: Division; index: number }) {
   return (
-    <div className="group relative w-full max-w-sm overflow-hidden rounded-sm border border-primary/10 dark:border-white/10 bg-white dark:bg-neutral-900 transition-all duration-300 hover:border-amber-500/40 hover:shadow-lg hover:shadow-amber-500/5">
+    <div className="group relative w-full max-w-sm overflow-hidden rounded-sm border border-primary/10 border-white/10 bg-black/30 bg-neutral-900 transition-all duration-300 hover:border-amber-500/40 hover:shadow-lg hover:shadow-amber-500/5">
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={division.image}
@@ -127,17 +127,17 @@ function DivisionCard({ division, index }: { division: Division; index: number }
 
       <div className="p-6 space-y-3">
         <div className="flex items-center justify-between">
-          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-amber-600 dark:text-amber-400">
+          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-amber-600 text-amber-400">
             {division.badge}
           </span>
-          <span className="font-mono text-[10px] text-white/30 dark:text-white/30">
+          <span className="font-mono text-[10px] text-white/30 text-white/30">
             {String(index + 1).padStart(2, "0")}
           </span>
         </div>
 
         <h4 className="font-serif text-2xl font-medium">{division.title}</h4>
 
-        <p className="text-sm leading-relaxed text-white/60 dark:text-white/50">
+        <p className="text-sm leading-relaxed text-white/60 text-white/50">
           {division.desc}
         </p>
 

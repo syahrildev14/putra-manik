@@ -3,11 +3,13 @@
 import { useState } from "react"
 import Image from "next/image"
 
-import humasy1 from "@/app/images/humasy/humasy.png"
-import humasy2 from "@/app/images/humasy/humasy.png"
-import humasy3 from "@/app/images/humasy/humasy.png"
-import humasy4 from "@/app/images/humasy/humasy.png"
-import humasy5 from "@/app/images/humasy/humasy.png"
+import ketua from "@/app/images/team/madun.png"
+import wakil from "@/app/images/team/kone.png"
+import sekretaris1 from "@/app/images/team/hafid.png"
+import sekretaris2 from "@/app/images/team/siska.png"
+import bendahara from "@/app/images/team/nabila.png"
+import humas from "@/app/images/team/aril.png"
+import media from "@/app/images/team/pengki.png"
 
 export default function Section() {
   const data = [
@@ -17,7 +19,7 @@ export default function Section() {
       dusun: "Juwok",
       rw: "02",
       rt: "06",
-      image: humasy1,
+      image: ketua,
     },
     {
       nama: "Novallino Setyanto Nugroho",
@@ -25,7 +27,7 @@ export default function Section() {
       dusun: "Gambang",
       rw: "01",
       rt: "03",
-      image: humasy2,
+      image: wakil,
     },
     {
       nama: "Hafitzh Aththorriq",
@@ -33,7 +35,7 @@ export default function Section() {
       dusun: "Gambang",
       rw: "04",
       rt: "02",
-      image: humasy3,
+      image: sekretaris1,
     },
     {
       nama: "Fransisca Arly Rahmadhani",
@@ -41,7 +43,7 @@ export default function Section() {
       dusun: "Pojok",
       rw: "03",
       rt: "01",
-      image: humasy4,
+      image: sekretaris2,
     },
     {
       nama: "Nabila Azzahra",
@@ -49,7 +51,7 @@ export default function Section() {
       dusun: "Keturus",
       rw: "03",
       rt: "01",
-      image: humasy4,
+      image: bendahara,
     },
     {
       nama: "Syahril Caesa Mahira",
@@ -57,7 +59,7 @@ export default function Section() {
       dusun: "Gambang",
       rw: "06",
       rt: "02",
-      image: humasy5,
+      image: humas,
     },
     {
       nama: "Muhammad Novan Ferdiyan",
@@ -65,7 +67,7 @@ export default function Section() {
       dusun: "Pojok",
       rw: "05",
       rt: "04",
-      image: humasy5,
+      image: media,
     },
   ]
 
@@ -93,15 +95,15 @@ export default function Section() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 md:min-h-screen flex items-center">
         <div className="grid md:grid-cols-[64px_1fr_1fr] gap-10 md:gap-16 items-center w-full">
           {/* INDEX RAIL — desktop only */}
-          <div className="hidden md:flex flex-col gap-1 border-r border-primary/10 dark:border-white/10 pr-6">
+          <div className="hidden md:flex flex-col gap-1 border-r border-primary/10 border-white/10 pr-6">
             {data.map((_, i) => (
               <button
                 key={i}
                 onClick={() => handleSelect(i)}
                 aria-label={`Lihat pengurus ${i + 1}`}
                 className={`text-left font-mono text-xs tracking-widest py-2 transition-colors duration-300 ${active === i
-                    ? "text-amber-600 dark:text-amber-400 font-semibold"
-                    : "text-primary/30 dark:text-white/25 hover:text-primary/60 dark:hover:text-white/50"
+                    ? "text-amber-600 text-amber-400 font-semibold"
+                    : "text-primary/30 text-white/25 hover:text-primary/60 hover:text-white/50"
                   }`}
               >
                 {String(i + 1).padStart(2, "0")}
@@ -122,12 +124,12 @@ export default function Section() {
               <h2 className="font-serif text-4xl md:text-6xl font-medium leading-[1.05] tracking-tight">
                 {current.nama}
               </h2>
-              <p className="text-sm uppercase tracking-[0.22em] text-primary/50 dark:text-white/50">
+              <p className="text-sm uppercase tracking-[0.22em] text-primary/50 text-white/50">
                 {current.divisi}
               </p>
             </div>
 
-            <div className="h-px w-16 bg-primary/20 dark:bg-white/20" />
+            <div className="h-px w-16 bg-primary/20 bg-white/20" />
 
             <div className="flex gap-8 md:gap-12">
               {[
@@ -136,7 +138,7 @@ export default function Section() {
                 ["RT", current.rt],
               ].map(([label, val]) => (
                 <div key={label}>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary/40 dark:text-white/40 mb-1">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary/40 text-white/40 mb-1">
                     {label}
                   </p>
                   <p className="text-sm font-semibold">{val}</p>
@@ -166,7 +168,7 @@ export default function Section() {
           <div className="relative flex justify-center md:justify-end">
             <span
               aria-hidden
-              className="absolute -top-8 right-0 md:-top-12 md:right-6 font-serif text-[9rem] md:text-[13rem] leading-none text-primary/[0.06] dark:text-white/[0.07] select-none"
+              className="absolute -top-8 right-0 md:-top-12 md:right-6 font-serif text-[9rem] md:text-[13rem] leading-none text-primary/[0.06] text-white/[0.07] select-none"
             >
               {String(active + 1).padStart(2, "0")}
             </span>

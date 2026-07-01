@@ -81,14 +81,8 @@ function PersonCard({
     image,
     size = "md",
     index = 0,
-}: Person & { size?: "xl" | "lg" | "md"; index?: number }) {
-
-    const imgHeight =
-        size === "xl"
-            ? "h-[34rem]"
-            : size === "lg"
-                ? "h-[28rem]"
-                : "h-72";
+}: Person & { size?: "lg" | "md"; index?: number }) {
+    const imgHeight = size === "lg" ? "h-96" : "h-72";
 
     return (
         <motion.div
@@ -110,7 +104,7 @@ function PersonCard({
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
 
                 {/* Social icons — revealed on hover */}
-                <div className="absolute bottom-4 right-4 flex gap-2">
+                <div className="absolute bottom-4 right-4 flex translate-y-2 gap-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     {[Instagram, Facebook, Mail].map((Icon, i) => (
                         <button
                             key={i}
@@ -187,8 +181,8 @@ export default function OrganizationChart() {
 
                     {/* Wakil & Sekretaris */}
                     <div className="grid gap-10 md:grid-cols-2">
-                        <PersonCard {...leaders.vice} size="lg" index={0} />
-                        <PersonCard {...leaders.secretary} size="lg" index={1} />
+                        <PersonCard {...leaders.vice} index={0} />
+                        <PersonCard {...leaders.secretary} index={1} />
                     </div>
 
                     {/* Connector: (Wakil, Sekretaris) -> Bendahara */}
@@ -213,7 +207,7 @@ export default function OrganizationChart() {
 
                     <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
                         {coordinators.map((item, i) => (
-                            <PersonCard key={item.name} {...item} size="lg" index={i} />
+                            <PersonCard key={item.name} {...item} index={i} />
                         ))}
                     </div>
                 </div>
