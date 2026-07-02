@@ -5,7 +5,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative flex min-h-screen items-center overflow-hidden">
+        <section className="relative flex items-center overflow-hidden">
 
             <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-6 py-20 text-center">
 

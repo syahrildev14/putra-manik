@@ -19,7 +19,7 @@ export default function BlogPage() {
 
   return (
     <main className="text-white">
-      <section className="max-w-6xl mx-auto px-4 md:px-6 pt-18 md:pt-10 pb-20 md:pb-28">
+      <section className="max-w-6xl mx-auto px-4 md:px-6 pt-6 md:pt-10 pb-20 md:pb-28">
         {/* Header */}
         <div className="mb-14 md:mb-20 space-y-4">
           <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">

@@ -6,11 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
 import Footer from "@/components/ui/Footer";
@@ -21,7 +18,7 @@ import { Righteous, Roboto } from "next/font/google";
 // icons
 import {
   Home,
-  Phone,
+  MessagesSquare,
   Shield,
   Newspaper,
   Landmark,
@@ -121,9 +118,11 @@ export default function RootLayout({
               <div className="hidden items-center gap-2 md:flex z-50">
 
 
-                <Link href="/contact">
+                <Link href="https://wa.me/6287864005772"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <Button className="text-white bg-amber-600">
-                    <Phone className="mr-2 h-4 w-4" />
+                    <MessagesSquare className="mr-2 h-4 w-4" />
                     Contact
                   </Button>
                 </Link>
@@ -139,7 +138,7 @@ export default function RootLayout({
                     </Button>
                   </SheetTrigger>
 
-                  <SheetContent side="right" className="w-[280px]">
+                  <SheetContent side="right" className="w-[280px] border-none">
 
                     <SheetHeader>
                       <SheetTitle>Menu Navigasi</SheetTitle>
@@ -189,9 +188,13 @@ export default function RootLayout({
 
                       <div className="mt-6 px-3">
                         <SheetClose asChild>
-                          <Link href="/contact">
+                          <Link
+                            href="https://wa.me/6287864005772"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Button className="w-full text-white">
-                              <Phone className="mr-2 h-4 w-4" />
+                              <MessagesSquare className="mr-2 h-4 w-4" />
                               Contact
                             </Button>
                           </Link>
