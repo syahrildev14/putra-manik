@@ -28,10 +28,10 @@ type RingkasanItem = {
 };
 
 const RINGKASAN: RingkasanItem[] = [
-  { nilai: 120, suffix: "+", label: "Anggota Aktif" },
-  { nilai: 35, label: "Program Tahunan" },
-  { nilai: 12, label: "RT Terjangkau" },
-  { nilai: 8, label: "Tahun Berdiri" },
+  { nilai: 16, suffix: "+", label: "Anggota Aktif" },
+  { nilai: 10, label: "Program Tahunan" },
+  { nilai: 22, label: "RT Terjangkau" },
+  { nilai: 2, label: "Tahun Berdiri" },
 ];
 
 // Jumlah anggota baru per tahun

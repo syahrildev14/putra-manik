@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 import Link from "next/link";
@@ -33,6 +34,7 @@ import {
   SheetTitle,
   SheetClose,
 } from "@/components/ui/sheet";
+import ScrollToTop from "@/components/ScrolltoTop";
 
 
 const roboto = Roboto({
@@ -239,7 +241,10 @@ export default function RootLayout({
           {/* FOOTER */}
           <Footer />
 
+          <ScrollToTop />
+
         </ThemeProvider>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html >
   );

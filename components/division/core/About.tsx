@@ -74,7 +74,7 @@ export default function About() {
                         {/* Penjelasan */}
 
                         <div className="mt-10 max-w-md">
-                            
+
 
                             <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/10 p-5">
                                 <p className="text-sm uppercase tracking-widest text-primary">
@@ -82,7 +82,7 @@ export default function About() {
                                 </p>
 
                                 <h4 className="mt-2 text-xl font-semibold text-white">
-                                    Bersama Berkarya, Bersama Membangun
+                                    Muda Beraksi, Nyata Mengabdi
                                 </h4>
                             </div>
                         </div>
@@ -99,30 +99,23 @@ export default function About() {
                     >
 
                         <p className="uppercase tracking-[0.3em] text-primary">
-                            Tentang Divisi
+                            Tentang Kartar Manik
                         </p>
 
                         <h2 className="mt-5 text-5xl font-bold leading-tight text-white">
                             Penggerak Utama
                             <span className="bg-gradient-to-r from-primary to-amber-300 bg-clip-text text-transparent">
-                                {" "}Karang Taruna
+                                {" "}Karang Taruna Putra Manik
                             </span>
                         </h2>
 
-                        <p className="mt-8 text-lg leading-9 text-slate-400">
-                            Divisi Inti merupakan pusat koordinasi organisasi
-                            yang bertugas mengelola kepemimpinan, menyusun
-                            strategi, mengawasi jalannya program kerja,
-                            serta memastikan seluruh divisi dapat
-                            berkolaborasi secara optimal.
-                        </p>
-
-                        <p className="mt-6 text-lg leading-9 text-slate-400">
-                            Dengan semangat gotong royong, Divisi Inti
-                            menjadi motor penggerak yang menghubungkan
-                            ide, aksi, dan inovasi demi menciptakan
-                            organisasi yang profesional dan berdampak
-                            bagi masyarakat.
+                        <p className="mt-8 text-lg leading-9 text-slate-400 text-justify">
+                            <strong>Karang Taruna Putra Manik</strong> merupakan organisasi
+                            kepemudaan yang berperan sebagai pusat koordinasi dalam merancang,
+                            mengelola, dan mengembangkan berbagai program kerja yang bermanfaat
+                            bagi masyarakat. Divisi Inti bertanggung jawab membangun kepemimpinan,
+                            menyusun strategi organisasi, serta memastikan setiap bidang dapat
+                            bekerja secara efektif untuk mencapai visi dan misi Karang Taruna.
                         </p>
 
                         <div className="mt-12 grid grid-cols-2 gap-5">
@@ -130,7 +123,7 @@ export default function About() {
                             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
 
                                 <h3 className="text-4xl font-black text-white">
-                                    100+
+                                    8+
                                 </h3>
 
                                 <p className="mt-2 text-slate-400">
@@ -142,7 +135,7 @@ export default function About() {
                             <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
 
                                 <h3 className="text-4xl font-black text-white">
-                                    5+
+                                    3+
                                 </h3>
 
                                 <p className="mt-2 text-slate-400">

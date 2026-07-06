@@ -140,7 +140,7 @@ export default function CTA() {
                                 />
 
                                 <h3 className="mt-6 text-5xl font-black text-white">
-                                    150+
+                                    70+
                                 </h3>
 
                                 <p className="mt-3 text-slate-300">
@@ -159,7 +159,7 @@ export default function CTA() {
                                 >
 
                                     <h4 className="text-4xl font-black text-white">
-                                        18
+                                        8
                                     </h4>
 
                                     <p className="mt-2 text-slate-400">
@@ -176,11 +176,11 @@ export default function CTA() {
                                 >
 
                                     <h4 className="text-4xl font-black text-white">
-                                        12
+                                        16
                                     </h4>
 
                                     <p className="mt-2 text-slate-400">
-                                        Pengurus Inti
+                                        Pengurus
                                     </p>
 
                                 </motion.div>

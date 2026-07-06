@@ -40,10 +40,10 @@ const PILAR_DATA: Pilar[] = [
 ];
 
 const STATISTIK = [
-  { angka: "14+", label: "Anggota Aktif" },
-  { angka: "10", label: "Program Tahunan" },
-  { angka: "15", label: "RT Terjangkau" },
-  { angka: "2018", label: "Tahun Berdiri" },
+  { angka: "70+", label: "Anggota Aktif" },
+  { angka: "10+", label: "Program Tahunan" },
+  { angka: "22", label: "RT Terjangkau" },
+  { angka: "3", label: "Tahun Berdiri" },
 ];
 
 const fadeUp: Variants = {
@@ -123,7 +123,7 @@ export default function About() {
             di desa kita.
           </h2>
 
-          <p className="mt-6 max-w-md text-base leading-relaxed text-white">
+          <p className="mt-6 max-w-md text-base leading-relaxed text-white text-justify">
             Karang Taruna adalah organisasi sosial kepemudaan yang lahir dari, oleh,
             dan untuk masyarakat desa. Kami percaya setiap anak muda punya peran
             dalam membangun lingkungan yang lebih hangat, mandiri, dan berdaya.

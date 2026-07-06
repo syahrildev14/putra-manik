@@ -66,7 +66,7 @@ export default function Timeline() {
                     </p>
 
                     <h2 className="mt-5 text-5xl font-bold text-white">
-                        Perjalanan Program Divisi Inti
+                        Perjalanan Program
                     </h2>
 
                     <p className="mt-6 text-lg leading-8 text-slate-400">
@@ -84,95 +84,74 @@ export default function Timeline() {
 
                 {/* Timeline */}
 
-                <div className="relative mt-28 overflow-x-auto pb-10">
+                <div className="relative mt-28 overflow-x-auto pb-10 ">
+                    <div className="relative w-max min-w-[1200px]">
 
-                    {/* Line */}
+                        {/* Timeline Line */}
+                        <div className="absolute left-0 right-0 top-12 h-1 rounded-full bg-slate-800">
+                            <motion.div
+                                initial={{ width: 0 }}
+                                whileInView={{ width: "100%" }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 2 }}
+                                className="h-full rounded-full bg-gradient-to-r from-primary via-amber-500 to-amber-100"
+                            />
+                        </div>
 
-                    <div className="absolute left-0 top-12 h-1 w-full rounded-full bg-slate-800">
+                        {/* Timeline Items */}
+                        <div className="relative flex justify-between gap-8">
+                            {timeline.map((item, index) => {
+                                const Icon = item.icon;
 
-                        <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: "100%" }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 2 }}
-                            className="h-full rounded-full bg-gradient-to-r from-primary via-amber-500 to-amber-100"
-                        />
+                                return (
+                                    <motion.div
+                                        key={item.month}
+                                        initial={{
+                                            opacity: 0,
+                                            y: 50,
+                                        }}
+                                        whileInView={{
+                                            opacity: 1,
+                                            y: 0,
+                                        }}
+                                        viewport={{
+                                            once: true,
+                                        }}
+                                        transition={{
+                                            delay: index * 0.2,
+                                        }}
+                                        whileHover={{
+                                            y: -10,
+                                        }}
+                                        className="relative w-64"
+                                    >
+                                        {/* Dot */}
+                                        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-slate-950 bg-gradient-to-br from-primary to-amber-300 shadow-2xl">
+                                            <Icon
+                                                className="text-white"
+                                                size={34}
+                                            />
+                                        </div>
 
+                                        {/* Card */}
+                                        <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+                                            <span className="rounded-full border border-amber-300/50 bg-amber-300/10 px-4 py-2 text-sm text-amber-300">
+                                                {item.month}
+                                            </span>
+
+                                            <h3 className="mt-6 text-2xl font-bold text-white">
+                                                {item.title}
+                                            </h3>
+
+                                            <p className="mt-4 leading-8 text-slate-400">
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
                     </div>
-
-                    <div className="relative flex min-w-[1200px] justify-between gap-8">
-
-                        {timeline.map((item, index) => {
-
-                            const Icon = item.icon;
-
-                            return (
-
-                                <motion.div
-                                    key={item.month}
-                                    initial={{
-                                        opacity: 0,
-                                        y: 50,
-                                    }}
-                                    whileInView={{
-                                        opacity: 1,
-                                        y: 0,
-                                    }}
-                                    viewport={{
-                                        once: true,
-                                    }}
-                                    transition={{
-                                        delay: index * .2,
-                                    }}
-                                    whileHover={{
-                                        y: -10,
-                                    }}
-                                    className="relative w-64"
-                                >
-
-                                    {/* Dot */}
-
-                                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-slate-950 bg-gradient-to-br from-primary to-amber-300 shadow-2xl">
-
-                                        <Icon
-                                            className="text-white"
-                                            size={34}
-                                        />
-
-                                    </div>
-
-                                    {/* Card */}
-
-                                    <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-
-                                        <span className="rounded-full px-4 py-2 text-sm border-amber-300/50 bg-amber-300/10 text-amber-300">
-
-                                            {item.month}
-
-                                        </span>
-
-                                        <h3 className="mt-6 text-2xl font-bold text-white">
-
-                                            {item.title}
-
-                                        </h3>
-
-                                        <p className="mt-4 leading-8 text-slate-400">
-
-                                            {item.description}
-
-                                        </p>
-
-                                    </div>
-
-                                </motion.div>
-
-                            );
-
-                        })}
-
-                    </div>
-
                 </div>
 
             </div>

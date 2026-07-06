@@ -46,7 +46,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="flex items-center justify-center w-9 h-9 rounded-full border border-primary/15 border-white/15 text-primary/60 text-white/60 hover:border-amber-500/50 hover:text-amber-600 hover:text-amber-400 transition-colors"
+                  className="flex items-center justify-center w-9 h-9 rounded-full border border-white/60 text-white/60 hover:bg-white/20 hover:text-white hover:border-white transition-colors"
                 >
                   <s.icon size={16} />
                 </a>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Navigation */}
           <div>
-            <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary/40 text-white/40 mb-4">
+            <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/40 mb-4">
               Menu
             </h3>
             <ul className="space-y-3 text-sm">
@@ -64,7 +64,7 @@ const Footer = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-primary/70 text-white/60 hover:text-amber-600 hover:text-amber-400 transition-colors"
+                    className="text-white/50 hover:text-white transition-colors"
                   >
                     {item.label}
                   </Link>

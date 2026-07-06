@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
-import { Facebook, Instagram, Mail } from "lucide-react";
 import Madun from "@/app/images/team/madun.png";
 import Kone from "@/app/images/team/kone.png";
 import Hafid from "@/app/images/team/hafid.png";
@@ -108,19 +107,6 @@ function PersonCard({
                     className="object-cover object-top grayscale-[15%] transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/10 to-transparent" />
-
-                {/* Social icons — revealed on hover */}
-                <div className="absolute bottom-4 right-4 flex gap-2">
-                    {[Instagram, Facebook, Mail].map((Icon, i) => (
-                        <button
-                            key={i}
-                            aria-label="Sosial media"
-                            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-slate-950/70 text-white backdrop-blur-sm transition hover:border-primary hover:bg-primary hover:text-slate-950"
-                        >
-                            <Icon size={15} />
-                        </button>
-                    ))}
-                </div>
             </div>
 
             {/* Content */}

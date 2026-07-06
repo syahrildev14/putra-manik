@@ -12,29 +12,29 @@ import {
 
 const stats = [
     {
-        title: "Pengurus Inti",
-        value: 12,
+        title: "Pengurus",
+        value: 16,
         suffix: "",
         icon: Users,
         color: "from-indigo-500 to-violet-500",
     },
     {
         title: "Program Kerja",
-        value: 18,
+        value: 8,
         suffix: "",
         icon: BriefcaseBusiness,
         color: "from-cyan-500 to-sky-500",
     },
     {
         title: "Anggota Aktif",
-        value: 150,
+        value: 70,
         suffix: "+",
         icon: Award,
         color: "from-emerald-500 to-teal-500",
     },
     {
         title: "Agenda Tahunan",
-        value: 24,
+        value: 8,
         suffix: "",
         icon: CalendarDays,
         color: "from-orange-500 to-amber-500",
@@ -70,7 +70,7 @@ export default function Stats() {
                     </p>
 
                     <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-                        Divisi Inti Dalam Angka
+                        Kepengurusan dan Program Kerja Karang Taruna Putra Manik
                     </h2>
 
                     <p className="mt-6 text-lg leading-8 text-slate-400">
@@ -209,11 +209,11 @@ export default function Stats() {
                                 Kepemimpinan yang Terukur
                             </h4>
 
-                            <p className="mt-4 leading-8 text-slate-400">
-                                Divisi Inti menjadi pusat koordinasi
-                                seluruh kegiatan Karang Taruna melalui
-                                perencanaan, evaluasi, dan pengambilan
-                                keputusan secara kolaboratif.
+                            <p className="mt-4 leading-8 text-slate-400 text-justify">
+                                Seluruh pengurus Karang Taruna Putra Manik berkolaborasi
+                                dalam mengoordinasikan berbagai program kerja melalui
+                                perencanaan yang matang, pelaksanaan yang terarah, serta
+                                evaluasi yang berkelanjutan untuk mencapai tujuan organisasi.
                             </p>
                         </div>
 

@@ -68,48 +68,6 @@ export default function DivisiIntiPage() {
 
             </div>
 
-            {/* Back To Top */}
-
-            <AnimatePresence>
-
-                {showButton && (
-
-                    <motion.button
-                        initial={{
-                            opacity: 0,
-                            scale: .8,
-                        }}
-                        animate={{
-                            opacity: 1,
-                            scale: 1,
-                        }}
-                        exit={{
-                            opacity: 0,
-                            scale: .8,
-                        }}
-                        whileHover={{
-                            y: -4,
-                        }}
-                        onClick={() =>
-                            window.scrollTo({
-                                top: 0,
-                                behavior: "smooth",
-                            })
-                        }
-                        className="fixed bottom-8 right-8 z-50 rounded-2xl bg-primary p-4 shadow-2xl transition hover:bg-indigo-500"
-                    >
-
-                        <ChevronUp
-                            size={22}
-                            className="text-white"
-                        />
-
-                    </motion.button>
-
-                )}
-
-            </AnimatePresence>
-
         </main>
     );
 }

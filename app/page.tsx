@@ -7,7 +7,6 @@ import StatistikSection from "@/components/DataStatistik";
 import DivisiKartarSection from "@/components/Divisi";
 
 // humasy
-import medusa from "./images/medusa.png"
 import SectionPengurus from "@/components/section-pengurus"
 import CarouselBlog from "@/components/CarouselBlog"
 import Medusa from "@/components/Medusa";

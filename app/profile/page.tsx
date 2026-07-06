@@ -27,18 +27,20 @@ const Page = () => {
         {/* CONTENT */}
         <div className="relative z-10 max-w-3xl px-6">
           <h1 className="text-5xl font-bold mb-4">
-            Profil Karang Taruna
+            Profil Karang Taruna Putra Manik
           </h1>
 
           <p className="text-lg text-gray-200">
-            Karang Taruna adalah organisasi kepemudaan yang berperan aktif
-            dalam kegiatan sosial, pembangunan masyarakat, dan pengembangan
-            potensi generasi muda.
+            <strong>Karang Taruna Putra Manik</strong> merupakan organisasi
+            kepemudaan yang berkomitmen dalam membangun generasi muda yang
+            aktif, kreatif, dan berdaya saing. Melalui berbagai program
+            pemberdayaan pemuda, kegiatan sosial, olahraga, seni budaya,
+            serta pengabdian kepada masyarakat.
           </p>
         </div>
 
       </section>
-      
+
       <About />
 
       <section className="max-w-7xl mx-auto px-4 py-20 space-y-20">
@@ -78,21 +80,21 @@ const Page = () => {
           <div className="relative pl-6 border-l">
 
             <div className="mb-6">
-              <p className="font-semibold">2020</p>
+              <p className="font-semibold">2024</p>
               <p className=" text-sm">
                 Pembentukan Karang Taruna Manik sebagai wadah organisasi pemuda.
               </p>
             </div>
 
             <div className="mb-6">
-              <p className="font-semibold">2022</p>
+              <p className="font-semibold">2025</p>
               <p className=" text-sm">
                 Mulai aktif mengadakan kegiatan sosial dan kepemudaan di desa.
               </p>
             </div>
 
             <div>
-              <p className="font-semibold">2024</p>
+              <p className="font-semibold">2026</p>
               <p className="text-sm">
                 Pengembangan divisi organisasi dan kegiatan kreatif pemuda.
               </p>

@@ -37,10 +37,10 @@ export default function Hero() {
                     transition={{ delay: .2 }}
                     className="mt-8 max-w-2xl text-lg leading-8 text-slate-300"
                 >
-                    Divisi Inti menjadi pusat koordinasi seluruh kegiatan
-                    Karang Taruna, memastikan setiap program berjalan
-                    efektif, terarah, dan memberikan manfaat nyata
-                    bagi masyarakat.
+                    Seluruh pengurus Karang Taruna Putra Manik bekerja sama dalam
+                    merencanakan, melaksanakan, dan mengembangkan berbagai program
+                    organisasi demi mewujudkan pemberdayaan pemuda serta memberikan
+                    kontribusi nyata bagi kemajuan masyarakat Desa Plumbon Gambang.
                 </motion.p>
 
             </div>

@@ -26,16 +26,14 @@ const kegiatanData = [
 ]
 
 const anggotaTahunan = [
-    { tahun: "2020", laki: 15, perempuan: 10 },
-    { tahun: "2021", laki: 14, perempuan: 5 },
-    { tahun: "2022", laki: 16, perempuan: 8 },
-    { tahun: "2023", laki: 10, perempuan: 8 },
-    { tahun: "2024", laki: 25, perempuan: 20 },
+    { tahun: "2024", laki: 8, perempuan: 2 },
+    { tahun: "2025", laki: 10, perempuan: 2 },
+    { tahun: "2026", laki: 12, perempuan: 4 },
 ]
 
 const genderData = [
-    { name: "Laki-laki", value: 40 },
-    { name: "Perempuan", value: 35 },
+    { name: "Laki-laki", value: 4 },
+    { name: "Perempuan", value: 12 },
 ]
 
 const COLORS = ["#2563eb", "#ec4899"]

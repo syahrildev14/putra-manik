@@ -2,7 +2,11 @@
 
 
 import Image, { StaticImageData } from "next/image"
-import img1 from "@/app/images/1.webp"
+// Image
+import inti from "@/app/images/galeri/inti.webp"
+import humas from "@/app/images/galeri/humas.webp"
+import media from "@/app/images/galeri/media.webp"
+
 import { motion } from "framer-motion";
 import {
   cardReveal,
@@ -29,21 +33,21 @@ export default function Section() {
       badge: "Kartar Manik",
       title: "Pengurus Utama",
       desc: "Pengurus Utama bertanggung jawab dalam memimpin organisasi, menyusun program kerja, mengoordinasikan seluruh divisi, serta memastikan setiap kegiatan Karang Taruna berjalan sesuai visi, misi, dan tujuan organisasi.",
-      image: img1,
+      image: inti,
     },
     {
       label: "Humasy",
       badge: "Kartar Manik",
       title: "Divisi Humasy",
       desc: "Divisi Humasy berperan membangun komunikasi yang baik dengan masyarakat, pemerintah desa, serta mitra organisasi. Divisi ini juga bertugas mengelola hubungan masyarakat, publikasi kegiatan, dan menjaga citra positif Karang Taruna.",
-      image: img1,
+      image: humas,
     },
     {
       label: "Media",
       badge: "Kartar Manik",
       title: "Divisi Media",
       desc: "Divisi Media bertanggung jawab mendokumentasikan setiap kegiatan, mengelola media sosial, membuat konten informasi dan promosi, serta menyebarluaskan berbagai aktivitas Karang Taruna kepada masyarakat secara kreatif dan informatif.",
-      image: img1,
+      image: media,
     },
   ];
 

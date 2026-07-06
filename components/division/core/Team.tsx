@@ -3,12 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-    Instagram,
-    Mail,
-    Phone,
-    Search,
-} from "lucide-react";
 
 // Image Team
 import Img1 from "@/app/images/team/akil.png";
@@ -218,16 +212,6 @@ export default function Team() {
                                 <p className="mt-4 leading-7 text-slate-400">
                                     {member.bio}
                                 </p>
-
-                                {/* Social */}
-
-                                <div className="mt-8 flex justify-between">
-                                    <button className="rounded-xl bg-slate-800 p-3 transition hover:bg-primary w-full flex items-center justify-center gap-2">
-
-                                        <Instagram size={18} />
-                                        Instagram
-                                    </button>
-                                </div>
 
                             </div>
 
