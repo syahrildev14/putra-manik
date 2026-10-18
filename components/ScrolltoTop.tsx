@@ -8,11 +8,18 @@ export default function ScrollToTop() {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setShowButton(window.scrollY > 500);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setShowButton(window.scrollY > 500);
+        ticking = false;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

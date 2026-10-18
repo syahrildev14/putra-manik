@@ -78,79 +78,71 @@ export default function Timeline() {
 
                 {/* Watermark */}
 
-                <div className="pointer-events-none absolute left-1/2 top-48 -translate-x-1/2 text-[220px] font-black text-white/[0.03]">
+                <div className="pointer-events-none absolute left-1/2 top-40 -translate-x-1/2 text-[180px] font-black text-white/[0.03] md:text-[220px]">
                     2026
                 </div>
 
                 {/* Timeline */}
 
-                <div className="relative mt-28 overflow-x-auto pb-10 ">
-                    <div className="relative w-max min-w-[1200px]">
+                <div className="relative mx-auto mt-20 max-w-3xl">
 
-                        {/* Timeline Line */}
-                        <div className="absolute left-0 right-0 top-12 h-1 rounded-full bg-slate-800">
-                            <motion.div
-                                initial={{ width: 0 }}
-                                whileInView={{ width: "100%" }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 2 }}
-                                className="h-full rounded-full bg-gradient-to-r from-primary via-amber-500 to-amber-100"
-                            />
-                        </div>
+                    {/* Timeline Line */}
+                    <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-slate-800 md:left-1/2">
+                        <motion.div
+                            initial={{ scaleY: 0 }}
+                            whileInView={{ scaleY: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            style={{ transformOrigin: "top" }}
+                            className="h-full w-full bg-gradient-to-b from-primary via-amber-500 to-amber-100"
+                        />
+                    </div>
 
-                        {/* Timeline Items */}
-                        <div className="relative flex justify-between gap-8">
-                            {timeline.map((item, index) => {
-                                const Icon = item.icon;
+                    {/* Timeline Items */}
+                    <div className="space-y-10 md:space-y-4">
+                        {timeline.map((item, index) => {
+                            const Icon = item.icon;
+                            const isEven = index % 2 === 0;
 
-                                return (
-                                    <motion.div
-                                        key={item.month}
-                                        initial={{
-                                            opacity: 0,
-                                            y: 50,
-                                        }}
-                                        whileInView={{
-                                            opacity: 1,
-                                            y: 0,
-                                        }}
-                                        viewport={{
-                                            once: true,
-                                        }}
-                                        transition={{
-                                            delay: index * 0.2,
-                                        }}
-                                        whileHover={{
-                                            y: -10,
-                                        }}
-                                        className="relative w-64"
+                            return (
+                                <motion.div
+                                    key={item.month}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                                    className={`relative flex md:items-center md:py-6 ${
+                                        isEven ? "md:justify-start" : "md:justify-end"
+                                    }`}
+                                >
+                                    {/* Dot */}
+                                    <div className="absolute left-6 top-0 z-10 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border-4 border-slate-950 bg-gradient-to-br from-primary to-amber-300 shadow-lg shadow-amber-500/20 md:left-1/2 md:top-1/2 md:-translate-y-1/2">
+                                        <Icon className="text-white" size={20} />
+                                    </div>
+
+                                    {/* Card */}
+                                    <div
+                                        className={`w-full pl-16 md:w-[calc(50%-2.5rem)] md:pl-0 ${
+                                            isEven ? "md:pr-10 md:text-right" : "md:pl-10"
+                                        }`}
                                     >
-                                        {/* Dot */}
-                                        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border-4 border-slate-950 bg-gradient-to-br from-primary to-amber-300 shadow-2xl">
-                                            <Icon
-                                                className="text-white"
-                                                size={34}
-                                            />
-                                        </div>
-
-                                        {/* Card */}
-                                        <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-                                            <span className="rounded-full border border-amber-300/50 bg-amber-300/10 px-4 py-2 text-sm text-amber-300">
+                                        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-colors hover:border-amber-300/40">
+                                            <span className="inline-block rounded-full border border-amber-300/50 bg-amber-300/10 px-3 py-1 text-xs font-medium tracking-wide text-amber-300">
                                                 {item.month}
                                             </span>
 
-                                            <h3 className="mt-6 text-2xl font-bold text-white">
+                                            <h3 className="mt-4 text-xl font-bold text-white">
                                                 {item.title}
                                             </h3>
 
-                                            <p className="mt-4 leading-8 text-slate-400">
+                                            <p className="mt-2 leading-7 text-slate-400">
                                                 {item.description}
                                             </p>
                                         </div>
-                                    </motion.div>
-                                );
-                            })}
-                        </div>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
 

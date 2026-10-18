@@ -174,11 +174,12 @@ export default function Programs() {
                         </div>
 
                         <p className="text-lg leading-9 text-slate-300">
-                            Divisi Inti tidak hanya mengelola administrasi,
-                            tetapi juga menjadi pusat pengambilan keputusan,
-                            pengembangan sumber daya manusia, serta
-                            penggerak inovasi demi terciptanya organisasi
-                            yang modern dan berdampak bagi masyarakat.
+                            Pengurus inti Karang Taruna Putra Manik tidak hanya
+                            mengelola administrasi, tetapi juga menjadi pusat
+                            pengambilan keputusan, pengembangan sumber daya
+                            manusia, serta penggerak inovasi demi terciptanya
+                            organisasi kepemudaan desa yang modern dan
+                            berdampak bagi masyarakat.
                         </p>
 
                     </div>

@@ -113,9 +113,9 @@ export default function About() {
                             <strong>Karang Taruna Putra Manik</strong> merupakan organisasi
                             kepemudaan yang berperan sebagai pusat koordinasi dalam merancang,
                             mengelola, dan mengembangkan berbagai program kerja yang bermanfaat
-                            bagi masyarakat. Divisi Inti bertanggung jawab membangun kepemimpinan,
-                            menyusun strategi organisasi, serta memastikan setiap bidang dapat
-                            bekerja secara efektif untuk mencapai visi dan misi Karang Taruna.
+                            bagi masyarakat, dengan kepengurusan yang terus berkolaborasi untuk
+                            memastikan setiap program berjalan efektif demi mencapai visi dan
+                            misi bersama.
                         </p>
 
                         <div className="mt-12 grid grid-cols-2 gap-5">

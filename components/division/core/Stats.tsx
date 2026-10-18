@@ -27,7 +27,7 @@ const stats = [
     },
     {
         title: "Anggota Aktif",
-        value: 70,
+        value: 60,
         suffix: "+",
         icon: Award,
         color: "from-emerald-500 to-teal-500",
@@ -154,20 +154,22 @@ export default function Stats() {
 
                                         <motion.div
                                             initial={{
-                                                width: 0,
+                                                scaleX: 0,
                                             }}
                                             animate={
                                                 inView
                                                     ? {
-                                                        width: "100%",
+                                                        scaleX: 1,
                                                     }
                                                     : {}
                                             }
                                             transition={{
                                                 duration: 1.2,
                                                 delay: index * .2,
+                                                ease: "easeOut",
                                             }}
-                                            className={`h-full rounded-full bg-gradient-to-r ${item.color}`}
+                                            style={{ transformOrigin: "left" }}
+                                            className={`h-full w-full rounded-full bg-gradient-to-r ${item.color}`}
                                         />
 
                                     </div>

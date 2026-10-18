@@ -3,13 +3,14 @@
 import { useState } from "react"
 import Image from "next/image"
 
-import ketua from "@/app/images/team/madun.png"
-import wakil from "@/app/images/team/kone.png"
-import sekretaris1 from "@/app/images/team/hafid.png"
-import sekretaris2 from "@/app/images/team/siska.png"
-import bendahara from "@/app/images/team/nabila.png"
-import humas from "@/app/images/team/aril.png"
-import media from "@/app/images/team/pengki.png"
+import ketua from "@/app/images/team/madun.webp"
+import wakil from "@/app/images/team/kone.webp"
+import sekretaris1 from "@/app/images/team/hafid.webp"
+import sekretaris2 from "@/app/images/team/siska.webp"
+import bendahara from "@/app/images/team/nabila.webp"
+import bendahara2 from "@/app/images/team/iril.jpeg"
+import humas from "@/app/images/team/aril.webp"
+import media from "@/app/images/team/pengki.webp"
 
 export default function Section() {
   const data = [
@@ -52,6 +53,14 @@ export default function Section() {
       rw: "03",
       rt: "01",
       image: bendahara,
+    },
+    {
+      nama: "Cheryl Angelaji",
+      divisi: "Bendahara Karang Taruna",
+      dusun: "Keturus",
+      rw: "03",
+      rt: "01",
+      image: bendahara2,
     },
     {
       nama: "Syahril Caesa Mahira",
@@ -117,7 +126,7 @@ export default function Section() {
               }`}
           >
             <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
-              Struktur Organisasi
+              Profil Pengurus
             </span>
 
             <div className="space-y-2">

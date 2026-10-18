@@ -7,7 +7,6 @@ import StatistikSection from "@/components/DataStatistik";
 import DivisiKartarSection from "@/components/Divisi";
 
 // humasy
-import SectionPengurus from "@/components/section-pengurus"
 import CarouselBlog from "@/components/CarouselBlog"
 import Medusa from "@/components/Medusa";
 
@@ -28,21 +27,17 @@ const Page = () => {
       <DivisiKartarSection />
 
       {/* Marquee */}
-      <Marquee>
-        <span className="flex items-center gap-6 font-semibold whitespace-nowrap">
-          Kartar Manik <Expand size={16} />
-          Kartar Manik <Expand size={16} />
-          Kartar Manik <Expand size={16} />
-          Kartar Manik <Expand size={16} />
-          Kartar Manik <Expand size={16} />
-        </span>
+      <Marquee gap={40}>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <span key={i} className="flex items-center gap-3 font-semibold whitespace-nowrap">
+            Putra Manik <Expand size={16} />
+          </span>
+        ))}
       </Marquee>
 
       {/* Pengurus Inti */}
       <section className="mt-10">
         <Medusa />
-
-        <SectionPengurus />
 
       </section>
 

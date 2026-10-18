@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import { Facebook, Instagram, Mail } from "lucide-react";
-import Madun from "@/app/images/team/madun.png";
-import Kone from "@/app/images/team/kone.png";
-import Hafid from "@/app/images/team/hafid.png";
-import Nabila from "@/app/images/team/nabila.png";
-import Pengki from "@/app/images/team/pengki.png";
-import Aril from "@/app/images/team/aril.png";
+import Madun from "@/app/images/team/madun.webp";
+import Kone from "@/app/images/team/kone.webp";
+import Hafid from "@/app/images/team/hafid.webp";
+import Nabila from "@/app/images/team/nabila.webp";
+import Khoirul from "@/app/images/team/iril.jpeg";
+import Pengki from "@/app/images/team/pengki.webp";
+import Aril from "@/app/images/team/aril.webp";
 
 type Person = {
     name: string;
@@ -18,7 +19,7 @@ type Person = {
     image: StaticImageData;
 };
 
-const leaders: Record<"chief" | "vice" | "secretary" | "treasurer", Person> = {
+const leaders: Record<"chief" | "vice" | "secretary", Person> = {
     chief: {
         name: "Muhammad Ma'arif",
         role: "Ketua",
@@ -37,13 +38,22 @@ const leaders: Record<"chief" | "vice" | "secretary" | "treasurer", Person> = {
         desc: "Mengelola administrasi, dokumentasi, dan komunikasi internal agar setiap kegiatan tercatat rapi.",
         image: Hafid,
     },
-    treasurer: {
+};
+
+const treasurers: Person[] = [
+    {
         name: "Nabila Azzahra",
         role: "Bendahara",
         desc: "Bertanggung jawab atas pengelolaan keuangan organisasi secara transparan dan akuntabel.",
         image: Nabila,
     },
-};
+    {
+        name: "Cheryl Angelaji",
+        role: "Bendahara",
+        desc: "Bertanggung jawab atas pengelolaan keuangan organisasi secara transparan dan akuntabel.",
+        image: Khoirul,
+    },
+];
 
 const coordinators: Person[] = [
     {
@@ -189,8 +199,10 @@ export default function OrganizationChart() {
                     <VStem className="mx-auto h-16" />
 
                     {/* Bendahara */}
-                    <div className="mx-auto max-w-sm">
-                        <PersonCard {...leaders.treasurer} size="lg" />
+                    <div className="grid gap-10 md:grid-cols-2">
+                        {treasurers.map((item, i) => (
+                            <PersonCard key={item.name} {...item} index={i} />
+                        ))}
                     </div>
                 </div>
 

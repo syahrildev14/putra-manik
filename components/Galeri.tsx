@@ -4,20 +4,27 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react"
 
-import img1 from "@/app/images/bareng.webp"
-import img2 from "@/app/images/galeri/humas.webp"
-import img3 from "@/app/images/1.webp"
-import img4 from "@/app/images/galeri/inti.webp"
-import img5 from "@/app/images/galeri/humas.webp"
-import img6 from "@/app/images/galeri/media.webp"
-import img7 from "@/app/images/1.webp"
-import img8 from "@/app/images/galeri/humas.webp"
-import img9 from "@/app/images/galeri/humas.webp"
-import img10 from "@/app/images/galeri/inti.webp"
-import img11 from "@/app/images/1.webp"
-import img12 from "@/app/images/galeri/media.webp"
+import bareng from "@/app/images/bareng.webp"
+import humas from "@/app/images/galeri/humas.webp"
+import inti from "@/app/images/galeri/inti.webp"
+import media from "@/app/images/galeri/media.webp"
+import satu from "@/app/images/1.webp"
+import { posts } from "@/app/blog/blog-data"
 
-const images = [img1, img2, img3, img4, img5, img6,img7, img8, img9, img10, img11, img12]
+// Dokumentasi internal organisasi
+const galeriUtama = [
+  { src: bareng, alt: "Kebersamaan anggota Karang Taruna Putra Manik" },
+  { src: humas, alt: "Dokumentasi Divisi Humas" },
+  { src: inti, alt: "Dokumentasi Pengurus Inti" },
+  { src: media, alt: "Dokumentasi Divisi Media" },
+  { src: satu, alt: "Dokumentasi kegiatan Karang Taruna" },
+]
+
+// Di-mix dengan foto kegiatan dari blog agar galeri terus terisi foto nyata terbaru
+const images = [
+  ...galeriUtama,
+  ...posts.map((p) => ({ src: p.image, alt: p.title })),
+]
 
 // Pola bento — ukuran tile bervariasi, mengulang tiap 6 item
 const spans = [
@@ -58,7 +65,7 @@ export default function SectionGaleri() {
   }, [selected])
 
   return (
-    <section className="relative max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-28 text-white overflow-hidden">
+    <section id="galeri" className="relative max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-28 text-white overflow-hidden">
       {/* TITLE */}
       <div className="text-center mb-14 space-y-4">
         <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
@@ -83,8 +90,8 @@ export default function SectionGaleri() {
             className={`group relative overflow-hidden rounded-sm border border-primary/10 border-white/10 hover:border-amber-500/40 transition-colors duration-300 ${spans[i % spans.length]}`}
           >
             <Image
-              src={img}
-              alt={`Dokumentasi kegiatan ${i + 1}`}
+              src={img.src}
+              alt={img.alt}
               fill
               sizes="(max-width: 768px) 50vw, 33vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -151,8 +158,8 @@ export default function SectionGaleri() {
           >
             <Image
               key={selected}
-              src={images[selected]}
-              alt={`Preview dokumentasi ${selected + 1}`}
+              src={images[selected].src}
+              alt={images[selected].alt}
               fill
               className="object-contain"
               priority

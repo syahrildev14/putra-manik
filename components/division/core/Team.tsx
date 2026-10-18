@@ -5,15 +5,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 // Image Team
-import Img1 from "@/app/images/team/akil.png";
-import Img2 from "@/app/images/team/ipan.png";
-import Img3 from "@/app/images/team/husni.png";
-import Img4 from "@/app/images/team/uj.png";
-import Img5 from "@/app/images/team/fajar.png";
-import Img6 from "@/app/images/team/abi.png";
-import Img7 from "@/app/images/team/flora.png";
-import Img8 from "@/app/images/team/ciput.png";
-import Img9 from "@/app/images/team/fadil.png";
+import Img1 from "@/app/images/team/akil.webp";
+import Img2 from "@/app/images/team/ipan.webp";
+import Img3 from "@/app/images/team/husni.webp";
+import Img4 from "@/app/images/team/uj.webp";
+import Img5 from "@/app/images/team/fajar.webp";
+import Img6 from "@/app/images/team/abi.webp";
+import Img7 from "@/app/images/team/flora.webp";
+import Img8 from "@/app/images/team/ciput.webp";
+import Img9 from "@/app/images/team/fadil.webp";
 
 
 

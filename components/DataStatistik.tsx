@@ -28,21 +28,20 @@ type RingkasanItem = {
 };
 
 const RINGKASAN: RingkasanItem[] = [
-  { nilai: 16, suffix: "+", label: "Anggota Aktif" },
+  { nilai: 60, suffix: "+", label: "Anggota Aktif" },
   { nilai: 10, label: "Program Tahunan" },
   { nilai: 22, label: "RT Terjangkau" },
-  { nilai: 2, label: "Tahun Berdiri" },
+  { nilai: 5, label: "Tahun Berdiri" },
 ];
 
-// Jumlah anggota baru per tahun
+// Jumlah anggota aktif per tahun sejak organisasi berdiri (2021)
 const PERTUMBUHAN_ANGGOTA = [
-  { tahun: "2019", anggota: 18 },
-  { tahun: "2020", anggota: 26 },
-  { tahun: "2021", anggota: 34 },
-  { tahun: "2022", anggota: 58 },
-  { tahun: "2023", anggota: 81 },
-  { tahun: "2024", anggota: 102 },
-  { tahun: "2025", anggota: 120 },
+  { tahun: "2021", anggota: 15 },
+  { tahun: "2022", anggota: 24 },
+  { tahun: "2023", anggota: 33 },
+  { tahun: "2024", anggota: 42 },
+  { tahun: "2025", anggota: 51 },
+  { tahun: "2026", anggota: 60 },
 ];
 
 // Komposisi kegiatan per bidang
@@ -166,7 +165,7 @@ export default function DataStatistik() {
           <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <h3 className="font-serif text-xl font-semibold text-white">
               {tabAktif === "pertumbuhan"
-                ? "Pertumbuhan Anggota (2019–2025)"
+                ? "Pertumbuhan Anggota (2021–2026)"
                 : "Sebaran Kegiatan per Bidang"}
             </h3>
 

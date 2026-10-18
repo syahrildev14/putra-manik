@@ -52,7 +52,7 @@ export default function Section() {
   ];
 
   return (
-    <section className="py-20 md:py-28 min-h-screen flex items-center text-white overflow-hidden">
+    <section id="divisi" className="py-20 md:py-28 min-h-screen flex items-center text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 w-full">
         {/* Header */}
         <motion.div

@@ -40,10 +40,10 @@ const PILAR_DATA: Pilar[] = [
 ];
 
 const STATISTIK = [
-  { angka: "70+", label: "Anggota Aktif" },
+  { angka: "60+", label: "Anggota Aktif" },
   { angka: "10+", label: "Program Tahunan" },
   { angka: "22", label: "RT Terjangkau" },
-  { angka: "3", label: "Tahun Berdiri" },
+  { angka: "5", label: "Tahun Berdiri" },
 ];
 
 const fadeUp: Variants = {

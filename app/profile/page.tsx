@@ -2,7 +2,7 @@ import Image from "next/image"
 import bareng from "@/app/images/bareng.webp"
 import SectionGaleri from "@/components/Galeri"
 
-import { Target, Eye, History } from "lucide-react"
+import { Target, Eye, History, MapPin } from "lucide-react"
 import About from "@/components/division/core/About"
 
 const Page = () => {
@@ -150,6 +150,49 @@ const Page = () => {
 
           </div>
 
+        </div>
+
+        {/* LOKASI */}
+        <div>
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-2 text-primary mb-3">
+              <MapPin size={20} />
+              <span className="font-semibold">Lokasi</span>
+            </div>
+
+            <h2 className="text-3xl font-bold mb-3">
+              Sekretariat Karang Taruna
+            </h2>
+            <p className="text-primary text-white/50 max-w-xl mx-auto">
+              Dusun Gambang, RW 02 / RT 06, Desa Plumbon Gambang, Kec. Gudo,
+              Kabupaten Jombang, Jawa Timur.
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-xl border shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31637.039575193194!2d112.1585428564726!3d-7.615183513595162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78417b55d4bd75%3A0xf1e6ed56bead082d!2sPlumbon%20Gambang%2C%20Kec.%20Gudo%2C%20Kabupaten%20Jombang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1791161990589!5m2!1sid!2sid"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokasi Karang Taruna Putra Manik"
+              className="w-full"
+            />
+          </div>
+
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Plumbon+Gambang%2C+Kec.+Gudo%2C+Kabupaten+Jombang%2C+Jawa+Timur"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+            >
+              <MapPin size={16} />
+              Buka di Google Maps
+            </a>
+          </div>
         </div>
 
       </section>

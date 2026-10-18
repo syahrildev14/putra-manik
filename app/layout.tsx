@@ -35,6 +35,7 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import ScrollToTop from "@/components/ScrolltoTop";
+import ScrollProgressBar from "@/components/ScrollProgressBar";
 
 
 const roboto = Roboto({
@@ -49,7 +50,7 @@ const logoFont = Righteous({
 });
 
 export const metadata: Metadata = {
-  title: "Kartar Manik",
+  title: "Karang Taruna Putra Manik",
   description: "Organisasi karang taruna plumbon desa gambang",
 };
 
@@ -65,8 +66,11 @@ export default function RootLayout({
       style={{ colorScheme: "light" }}
       suppressHydrationWarning
     >
-      <body className={`${roboto.className} antialiased min-h-screen flex flex-col`}>
-
+      <body
+        className={`${roboto.className} antialiased min-h-screen flex flex-col`}
+        suppressHydrationWarning
+      >
+        <ScrollProgressBar />
         <ThemeProvider>
 
           {/* HEADER */}

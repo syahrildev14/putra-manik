@@ -90,9 +90,10 @@ export default function CTA() {
 
                             <p className="mt-8 max-w-xl text-lg leading-9 text-slate-300">
 
-                                Divisi Inti membuka ruang kolaborasi bagi
-                                pemuda yang memiliki semangat kepemimpinan,
-                                inovasi, dan kepedulian terhadap masyarakat.
+                                Pengurus inti Karang Taruna Putra Manik membuka
+                                ruang kolaborasi bagi pemuda desa yang memiliki
+                                semangat kepemimpinan, inovasi, dan kepedulian
+                                terhadap masyarakat.
 
                             </p>
 

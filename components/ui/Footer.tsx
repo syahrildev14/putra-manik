@@ -1,17 +1,19 @@
 import Link from "next/link"
-import { MapPin, Mail, Phone, Instagram, Youtube } from "lucide-react"
+import { MapPin, Mail, Phone } from "lucide-react"
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa"
 
 const menu = [
   { label: "Beranda", href: "/" },
-  { label: "Struktur Organisasi", href: "/#pengurus" },
+  { label: "Struktur Organisasi", href: "/pengurus" },
   { label: "Program Kerja", href: "/#divisi" },
-  { label: "Galeri", href: "/#galeri" },
+  { label: "Galeri", href: "/profile#galeri" },
   { label: "Blog", href: "/blog" },
 ]
 
 const socials = [
-  { label: "Instagram", href: "https://instagram.com/kartarmanik", icon: Instagram },
-  { label: "YouTube", href: "https://youtube.com/@kartarmanik", icon: Youtube },
+  { label: "Instagram", href: "https://instagram.com/kartarmanik", icon: FaInstagram },
+  { label: "TikTok", href: "https://tiktok.com/@kartarmanik", icon: FaTiktok },
+  { label: "WhatsApp", href: "https://wa.me/6287864005772", icon: FaWhatsapp },
 ]
 
 const Footer = () => {
