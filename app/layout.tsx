@@ -166,7 +166,7 @@ export default function RootLayout({
         <ThemeProvider>
 
           {/* HEADER */}
-          <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/40">
+          <header className="sticky top-0 z-90 bg-background/80 backdrop-blur-xl border-b border-border/40">
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
 
               {/* Logo Interaktif */}
