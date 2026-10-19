@@ -1,9 +1,25 @@
 import Image from "next/image"
+import type { Metadata } from "next"
 import bareng from "@/app/images/bareng.webp"
 import SectionGaleri from "@/components/Galeri"
 
 import { Target, Eye, History, MapPin } from "lucide-react"
 import About from "@/components/division/core/About"
+
+export const metadata: Metadata = {
+  title: "Profil, Sejarah, Visi Misi, dan Lokasi",
+  description:
+    "Profil Karang Taruna Putra Manik: sejarah berdirinya organisasi, visi misi, serta lokasi sekretariat di Desa Plumbon Gambang, Kec. Gudo, Kabupaten Jombang, Jawa Timur.",
+  alternates: {
+    canonical: "/profile",
+  },
+  openGraph: {
+    title: "Profil Karang Taruna Putra Manik",
+    description:
+      "Sejarah, visi misi, dan lokasi sekretariat Karang Taruna Putra Manik di Desa Plumbon Gambang, Kec. Gudo, Kabupaten Jombang.",
+    url: "/profile",
+  },
+}
 
 const Page = () => {
   return (
@@ -15,7 +31,7 @@ const Page = () => {
         {/* BACKGROUND IMAGE */}
         <Image
           src={bareng}
-          alt="Karang Taruna"
+          alt="Kegiatan Karang Taruna Putra Manik di Desa Plumbon Gambang"
           fill
           priority
           className="object-cover object-[center_30%]"
@@ -164,8 +180,7 @@ const Page = () => {
               Sekretariat Karang Taruna
             </h2>
             <p className="text-primary text-white/50 max-w-xl mx-auto">
-              Dusun Gambang, RW 02 / RT 06, Desa Plumbon Gambang, Kec. Gudo,
-              Kabupaten Jombang, Jawa Timur.
+              Desa Plumbon Gambang, Kec. Gudo, Kabupaten Jombang, Jawa Timur.
             </p>
           </div>
 

@@ -90,7 +90,7 @@ export default function CTA() {
 
                             <p className="mt-8 max-w-xl text-lg leading-9 text-slate-300">
 
-                                Pengurus inti Karang Taruna Putra Manik membuka
+                                Pengurus Karang Taruna Putra Manik membuka
                                 ruang kolaborasi bagi pemuda desa yang memiliki
                                 semangat kepemimpinan, inovasi, dan kepedulian
                                 terhadap masyarakat.
@@ -100,26 +100,19 @@ export default function CTA() {
                             {/* Button */}
 
                             <div className="mt-12 flex flex-wrap gap-5">
-
-                                <button className="group flex items-center gap-3 rounded-2xl bg-primary px-8 py-5 text-white transition hover:bg-primary/80">
-
-                                    Gabung Sekarang
-
+                                <a
+                                    href="https://wa.me/6287864005772"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 rounded-2xl bg-primary px-8 py-5 font-medium text-white transition hover:bg-primary/80"
+                                >
+                                    <Phone size={18} />
+                                    Hubungi Kami via WhatsApp
                                     <ArrowRight
                                         size={20}
                                         className="transition group-hover:translate-x-1"
                                     />
-
-                                </button>
-
-                                <button className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-5 text-white transition hover:border-primary hover:bg-white/10">
-
-                                    <Phone size={18} />
-
-                                    Hubungi Kami
-
-                                </button>
-
+                                </a>
                             </div>
 
                         </div>

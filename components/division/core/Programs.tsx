@@ -63,7 +63,7 @@ export default function Programs() {
                     </p>
 
                     <h2 className="mt-5 text-5xl font-bold text-white">
-                        Fokus Utama Divisi Inti
+                        Fokus Utama Pengurus Karang Taruna Putra Manik
                     </h2>
 
                     <p className="mt-6 text-lg leading-8 text-slate-400">
@@ -174,7 +174,7 @@ export default function Programs() {
                         </div>
 
                         <p className="text-lg leading-9 text-slate-300">
-                            Pengurus inti Karang Taruna Putra Manik tidak hanya
+                            Pengurus Karang Taruna Putra Manik tidak hanya
                             mengelola administrasi, tetapi juga menjadi pusat
                             pengambilan keputusan, pengembangan sumber daya
                             manusia, serta penggerak inovasi demi terciptanya

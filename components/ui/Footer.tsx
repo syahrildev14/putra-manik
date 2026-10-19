@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
-                Kartar
+                Karang Taruna
               </span>
               <h2 className="font-serif text-2xl font-medium tracking-tight">
                 Putra Manik
@@ -83,15 +83,15 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary/70 text-white/60">
               <li className="flex items-start gap-2.5">
                 <MapPin size={15} className="mt-0.5 shrink-0 text-amber-600 text-amber-400" />
-                <span>Dusun Gambang, RW 02 / RT 06</span>
+                <span>Desa Plumbon Gambang</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail size={15} className="shrink-0 text-amber-600 text-amber-400" />
-                <span>kartarmanik@gmail.com</span>
+                <span>kartarmanik17@gmail.com</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={15} className="shrink-0 text-amber-600 text-amber-400" />
-                <span>+62 812 xxxx xxxx</span>
+                <span>+62 878 6400 5772</span>
               </li>
             </ul>
           </div>

@@ -5,6 +5,28 @@ import { ArrowLeft } from "lucide-react"
 
 import { getPostBySlug, getRelatedPosts, posts } from "@/app/blog/blog-data"
 
+const INDONESIAN_MONTHS: Record<string, string> = {
+  januari: "01",
+  februari: "02",
+  maret: "03",
+  april: "04",
+  mei: "05",
+  juni: "06",
+  juli: "07",
+  agustus: "08",
+  september: "09",
+  oktober: "10",
+  november: "11",
+  desember: "12",
+}
+
+function toIsoDate(date: string) {
+  const [day, month, year] = date.toLowerCase().split(" ")
+  const monthNumber = INDONESIAN_MONTHS[month]
+  if (!monthNumber) return undefined
+  return `${year}-${monthNumber}-${day.padStart(2, "0")}`
+}
+
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }))
 }
@@ -25,6 +47,31 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${post.slug}`,
+      publishedTime: toIsoDate(post.date),
+      authors: [post.author],
+      images: [
+        {
+          url: post.image.src,
+          width: post.image.width,
+          height: post.image.height,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image.src],
+    },
   };
 }
 
@@ -43,8 +90,38 @@ export default async function BlogDetailPage({
 
   const related = getRelatedPosts(post.slug);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: [post.image.src],
+    datePublished: toIsoDate(post.date),
+    author: {
+      "@type": "Organization",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Karang Taruna Putra Manik",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://kartarputramanik.my.id/og-image.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://kartarputramanik.my.id/blog/${post.slug}`,
+    },
+  };
+
   return (
     <main className="text-white">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <article className="max-w-5xl mx-auto px-4 md:px-6 pt-10 pb-24">
         {/* Back link */}
         <Link

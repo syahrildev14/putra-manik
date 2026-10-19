@@ -10,6 +10,7 @@ import Nabila from "@/app/images/team/nabila.webp";
 import Khoirul from "@/app/images/team/iril.jpeg";
 import Pengki from "@/app/images/team/pengki.webp";
 import Aril from "@/app/images/team/aril.webp";
+import Siska from "@/app/images/team/siska.webp";
 
 type Person = {
     name: string;
@@ -18,7 +19,7 @@ type Person = {
     image: StaticImageData;
 };
 
-const leaders: Record<"chief" | "vice" | "secretary", Person> = {
+const leaders: Record<"chief" | "vice" | "secretary1" | "secretary2", Person> = {
     chief: {
         name: "Muhammad Ma'arif",
         role: "Ketua",
@@ -31,24 +32,30 @@ const leaders: Record<"chief" | "vice" | "secretary", Person> = {
         desc: "Mendampingi ketua dalam pengambilan keputusan serta menjaga koordinasi antar divisi tetap solid.",
         image: Kone,
     },
-    secretary: {
+    secretary1: {
         name: "Hafitzh Aththorriq",
-        role: "Sekretaris",
+        role: "Sekretaris 1",
         desc: "Mengelola administrasi, dokumentasi, dan komunikasi internal agar setiap kegiatan tercatat rapi.",
         image: Hafid,
+    },
+    secretary2: {
+        name: "Fransisca Arly Rahmadhani",
+        role: "Sekretaris 2",
+        desc: "Mendukung pengelolaan administrasi dan kelancaran kesekretariatan organisasi.",
+        image: Siska,
     },
 };
 
 const treasurers: Person[] = [
     {
         name: "Nabila Azzahra",
-        role: "Bendahara",
+        role: "Bendahara 1",
         desc: "Bertanggung jawab atas pengelolaan keuangan organisasi secara transparan dan akuntabel.",
         image: Nabila,
     },
     {
         name: "Cheryl Angelaji",
-        role: "Bendahara",
+        role: "Bendahara 2",
         desc: "Bertanggung jawab atas pengelolaan keuangan organisasi secara transparan dan akuntabel.",
         image: Khoirul,
     },
@@ -160,40 +167,43 @@ export default function OrganizationChart() {
                 </div>
 
                 {/* Hierarchy tree */}
-                <div className="mx-auto max-w-4xl">
-                    {/* Ketua */}
-                    <div className="mx-auto max-w-sm">
-                        <PersonCard {...leaders.chief} size="lg" />
+                <div className="mx-auto max-w-5xl">
+                    {/* Level 1: Ketua & Wakil Ketua (Sejajar) */}
+                    <div className="mx-auto grid max-w-3xl gap-10 md:grid-cols-2">
+                        <PersonCard {...leaders.chief} size="lg" index={0} />
+                        <PersonCard {...leaders.vice} size="lg" index={1} />
                     </div>
 
-                    {/* Connector: Ketua -> (Wakil, Sekretaris) */}
-                    <div className="relative mx-auto hidden h-16 max-w-2xl md:block">
-                        <VStem className="absolute left-1/2 top-0 h-8 -translate-x-1/2" />
+                    {/* Connector: (Ketua & Wakil) -> (Sekretaris 1, Sekretaris 2, Bendahara) */}
+                    <div className="relative mx-auto hidden h-16 max-w-4xl md:block">
+                        <VStem className="absolute left-1/4 top-0 h-8" />
+                        <VStem className="absolute right-1/4 top-0 h-8" />
                         <motion.div
                             initial={{ scaleX: 0 }}
                             whileInView={{ scaleX: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
-                            className="absolute left-1/4 right-1/4 top-8 h-px origin-center bg-gradient-to-r from-transparent via-primary/50 to-transparent"
+                            className="absolute left-[16.5%] right-[16.5%] top-8 h-px origin-center bg-gradient-to-r from-transparent via-primary/50 to-transparent"
                         />
-                        <VStem className="absolute left-1/4 top-8 h-8" />
-                        <VStem className="absolute right-1/4 top-8 h-8" />
+                        <VStem className="absolute left-[16.5%] top-8 h-8" />
+                        <VStem className="absolute left-1/2 top-8 h-8 -translate-x-1/2" />
+                        <VStem className="absolute right-[16.5%] top-8 h-8" />
                     </div>
                     <VStem className="mx-auto h-10 md:hidden" />
 
-                    {/* Wakil & Sekretaris */}
-                    <div className="grid gap-10 md:grid-cols-2">
-                        <PersonCard {...leaders.vice} size="lg" index={0} />
-                        <PersonCard {...leaders.secretary} size="lg" index={1} />
+                    {/* Level 2: Sekretaris 1 & Sekretaris 2 */}
+                    <div className="mx-auto grid max-w-3xl gap-10 md:grid-cols-2">
+                        <PersonCard {...leaders.secretary1} size="lg" index={2} />
+                        <PersonCard {...leaders.secretary2} size="lg" index={3} />
                     </div>
 
-                    {/* Connector: (Wakil, Sekretaris) -> Bendahara */}
+                    {/* Connector: Sekretaris -> Bendahara */}
                     <VStem className="mx-auto h-16" />
 
-                    {/* Bendahara */}
-                    <div className="grid gap-10 md:grid-cols-2">
+                    {/* Level 3: Bendahara */}
+                    <div className="mx-auto grid max-w-3xl gap-10 md:grid-cols-2">
                         {treasurers.map((item, i) => (
-                            <PersonCard key={item.name} {...item} size="lg" index={i} />
+                            <PersonCard key={item.name} {...item} size="lg" index={i + 4} />
                         ))}
                     </div>
                 </div>
@@ -209,7 +219,7 @@ export default function OrganizationChart() {
                         </h3>
                     </div>
 
-                    <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+                    <div className="mx-auto grid max-w-3xl gap-8 md:grid-cols-2">
                         {coordinators.map((item, i) => (
                             <PersonCard key={item.name} {...item} size="lg" index={i} />
                         ))}

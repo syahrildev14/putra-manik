@@ -63,18 +63,21 @@ const Medusa = () => {
                 className="relative flex justify-center items-center mt-20 overflow-hidden"
             >
                 {/* TEXT BELAKANG */}
-                <div className="absolute z-0 text-center select-none pointer-events-none leading-[0.8] uppercase font-extrabold text-gray-300">
+                <div
+                    className="absolute z-0 text-center select-none pointer-events-none leading-[0.8] uppercase font-extrabold text-gray-300"
+                    aria-hidden="true"
+                >
 
                     <div className="overflow-hidden">
-                        <h1 className="title-reveal text-[8rem] sm:text-[14rem] md:text-[22rem]">
+                        <div className="title-reveal text-[8rem] sm:text-[14rem] md:text-[22rem]">
                             KARANG
-                        </h1>
+                        </div>
                     </div>
 
                     <div className="overflow-hidden">
-                        <h1 className="title-reveal text-[8rem] sm:text-[14rem] md:text-[22rem]">
+                        <div className="title-reveal text-[8rem] sm:text-[14rem] md:text-[22rem]">
                             TARUNA
-                        </h1>
+                        </div>
                     </div>
 
                 </div>
@@ -82,7 +85,7 @@ const Medusa = () => {
                 {/* IMAGE */}
                 <Image
                     src={medusa}
-                    alt="medusa"
+                    alt="Maskot Karang Taruna Putra Manik"
                     className="hero-image relative z-10 max-w-[200px] sm:max-w-xs md:max-w-none"
                 />
             </div>

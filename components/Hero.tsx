@@ -53,7 +53,7 @@ export default function Hero() {
         transition={{ delay: .6 }}
         className="hidden lg:block absolute left-10 top-1/2 -translate-y-1/2"
       >
-        <h1 className="leading-none">
+        <div className="leading-none" aria-hidden="true">
           <span className="block text-7xl xl:text-8xl font-black">
             KARANG
           </span>
@@ -61,7 +61,7 @@ export default function Hero() {
           <span className="block text-7xl xl:text-8xl font-black text-white/15">
             TARUNA
           </span>
-        </h1>
+        </div>
 
         <div className="mt-10 w-24 h-px bg-white/20" />
 
@@ -92,7 +92,7 @@ export default function Hero() {
         >
           <Image
             src={imageHero}
-            alt="Hero"
+            alt="Karang Taruna Putra Manik - Organisasi Pemuda Desa Plumbon Gambang"
             width={1800}
             height={1800}
             className="w-[150vw] md:w-[40vw] h-auto drop-shadow-2xl"
@@ -146,7 +146,7 @@ export default function Hero() {
         className="lg:hidden absolute bottom-28 left-1/2 -translate-x-1/2 text-center z-50"
       >
         <h1 className="text-4xl font-black">
-          KARANG TARUNA
+          Karang Taruna Putra Manik
         </h1>
 
         <p className="mt-3 text-sm text-white/60 max-w-xs">
