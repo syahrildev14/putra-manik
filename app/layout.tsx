@@ -61,6 +61,17 @@ export const metadata: Metadata = {
   },
   description:
     "Karang Taruna Putra Manik adalah organisasi kepemudaan Desa Plumbon Gambang, Kec. Gudo, Kabupaten Jombang, Jawa Timur. Bergerak dalam kegiatan sosial, pelatihan, dan pemberdayaan generasi muda desa.",
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+
   keywords: [
     "Karang Taruna Putra Manik",
     "Karang Taruna Plumbon Gambang",
