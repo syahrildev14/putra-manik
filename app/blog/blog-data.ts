@@ -1,15 +1,15 @@
 import { StaticImageData } from "next/image"
 
-import karnaval from "@/app/blog/assets/karnaval-17agustus.jpeg"
-import sosialisasi from "@/app/blog/assets/sosialisasi-pemuda-desa-mandiri.jpeg"
-import fadMiagan from "@/app/blog/assets/event-fad-miagan.jpeg"
-import nextGenYouth from "@/app/blog/assets/next-gen-youth.jpeg"
-import healingBareng from "@/app/blog/assets/healing-bareng.jpeg"
-import bukaBersama from "@/app/blog/assets/buka-bersama.jpeg"
-import bukberExpression from "@/app/blog/assets/bukber-expression.jpeg"
-import pelatihanDesain from "@/app/blog/assets/pelatihan-desain-grafis.jpeg"
-import pelatihanSosmed from "@/app/blog/assets/pelatihan-sosial-media.jpeg"
-import makrab from "@/app/blog/assets/makrab2025.jpeg"
+import karnaval from "@/app/blog/assets/karnaval-17agustus.jpg"
+import sosialisasi from "@/app/blog/assets/sosialisasi-pemuda-desa-mandiri.jpg"
+import fadMiagan from "@/app/blog/assets/event-fad-miagan.jpg"
+import nextGenYouth from "@/app/blog/assets/next-gen-youth.jpg"
+import healingBareng from "@/app/blog/assets/healing-bareng.jpg"
+import bukaBersama from "@/app/blog/assets/buka-bersama.jpg"
+import bukberExpression from "@/app/blog/assets/bukber-expression.jpg"
+import pelatihanDesain from "@/app/blog/assets/pelatihan-desain-grafis.jpg"
+import pelatihanSosmed from "@/app/blog/assets/pelatihan-sosial-media.jpg"
+import makrab from "@/app/blog/assets/makrab2025.jpg"
 
 export interface BlogPost {
   slug: string

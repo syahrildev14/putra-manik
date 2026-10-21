@@ -4,6 +4,14 @@ import { notFound } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
 
 import { getPostBySlug, getRelatedPosts, posts } from "@/app/blog/blog-data"
+import { ViewCounter } from "./view-counter"
+import {
+  FadeUpOnMount,
+  RevealCard,
+  RevealParagraph,
+  RevealStaggerGroup,
+  ScaleInOnMount,
+} from "./motion-wrappers"
 
 const INDONESIAN_MONTHS: Record<string, string> = {
   januari: "01",
@@ -133,7 +141,7 @@ export default async function BlogDetailPage({
         </Link>
 
         {/* Header */}
-        <div className="space-y-5 mb-10">
+        <FadeUpOnMount className="space-y-5 mb-10">
           <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-amber-600 text-amber-400">
             {post.category}
           </span>
@@ -148,11 +156,16 @@ export default async function BlogDetailPage({
             <span>{post.date}</span>
             <span>&middot;</span>
             <span>{post.readTime} baca</span>
+            <span>&middot;</span>
+            <ViewCounter slug={post.slug} />
           </div>
-        </div>
+        </FadeUpOnMount>
 
         {/* Hero image */}
-        <div className="relative w-full h-64 md:h-[420px] overflow-hidden rounded-sm mb-12">
+        <ScaleInOnMount
+          delay={0.1}
+          className="relative w-full h-64 md:h-[420px] overflow-hidden rounded-sm mb-12"
+        >
           <Image
             src={post.image}
             alt={post.title}
@@ -161,12 +174,12 @@ export default async function BlogDetailPage({
             className="object-cover"
             priority
           />
-        </div>
+        </ScaleInOnMount>
 
         {/* Content */}
         <div className="space-y-6">
           {post.content.map((paragraph, i) => (
-            <p
+            <RevealParagraph
               key={i}
               className={`text-base leading-relaxed text-primary/80 text-white/70 ${i === 0
                 ? "first-letter:font-serif first-letter:text-5xl first-letter:font-medium first-letter:text-amber-600 first-letter:text-amber-400 first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
@@ -174,7 +187,7 @@ export default async function BlogDetailPage({
                 }`}
             >
               {paragraph}
-            </p>
+            </RevealParagraph>
           ))}
         </div>
 
@@ -182,39 +195,40 @@ export default async function BlogDetailPage({
 
         {/* Related posts */}
         {related.length > 0 && (
-          <div className="space-y-6">
+          <RevealStaggerGroup className="space-y-6">
             <span className="inline-block font-mono text-[11px] uppercase tracking-[0.3em] text-primary/40 text-white/40">
               Baca juga
             </span>
 
             <div className="grid sm:grid-cols-3 gap-6">
-              {related.map((r) => (
-                <Link
-                  key={r.slug}
-                  href={`/blog/${r.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-sm border border-primary/10 border-white/10 hover:border-amber-500/40 transition-colors duration-300"
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={r.image}
-                      alt={r.title}
-                      fill
-                      sizes="33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-4 space-y-2">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-600 text-amber-400">
-                      {r.category}
-                    </span>
-                    <h4 className="font-serif text-base font-medium leading-snug">
-                      {r.title}
-                    </h4>
-                  </div>
-                </Link>
+              {related.map((r, index) => (
+                <RevealCard key={r.slug} index={index}>
+                  <Link
+                    href={`/blog/${r.slug}`}
+                    className="group flex flex-col h-full overflow-hidden rounded-sm border border-primary/10 border-white/10 hover:border-amber-500/40 transition-colors duration-300"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={r.image}
+                        alt={r.title}
+                        fill
+                        sizes="33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-4 space-y-2">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-600 text-amber-400">
+                        {r.category}
+                      </span>
+                      <h4 className="font-serif text-base font-medium leading-snug">
+                        {r.title}
+                      </h4>
+                    </div>
+                  </Link>
+                </RevealCard>
               ))}
             </div>
-          </div>
+          </RevealStaggerGroup>
         )}
       </article>
     </main>

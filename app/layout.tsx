@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import Footer from "@/components/ui/Footer";
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 
 // font
 import { Righteous, Roboto } from "next/font/google";
@@ -163,6 +164,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <ScrollProgressBar />
+        <SmoothScrollProvider>
         <ThemeProvider>
 
           {/* HEADER */}
@@ -359,6 +361,7 @@ export default function RootLayout({
           <ScrollToTop />
 
         </ThemeProvider>
+        </SmoothScrollProvider>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>
